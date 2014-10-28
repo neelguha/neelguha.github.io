@@ -24,7 +24,7 @@
         <ul class="nav nav-justified">
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li`><a href="#">Resume</a></li>
+          <li><a href="#">Resume</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
