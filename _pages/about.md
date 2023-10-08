@@ -2,25 +2,24 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle:
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  address: 
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false  # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm a fourth year JD-PhD student in Computer Science at Stanford University (advised by <a href="https://cs.stanford.edu/~chrismre/">Chris Ré</a>) and a Graduate Student Fellow at the <a href="https://reglab.stanford.edu/">RegLab</a>. I graduated with a MS in Machine Learning from Carnegie Mellon University ('19) and a BS (with Honors) in Computer Science from Stanford University ('18). I'm grateful to be supported by the <a href="https://vpge.stanford.edu/fellowships-funding/sigf">Stanford Interdisciplinary Graduate Fellowship (SIGF)</a> and the <a href= "https://hai.stanford.edu/fellows">HAI Graduate Fellowship</a>.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My computer science work explores (1) legal applications of large language models, and (2) methods for enabling machine learning systems to better leverage structure (e.g., type information, knowledge base triples, embeddings). My recent work includes leading the creation of <a href="https://hazyresearch.stanford.edu/legalbench/">LegalBench</a>, a large scale open effort to develop benchmark tasks for evaluating legal reasoning in LLMs. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+On the law side, my work explores questions of AI safety through the lens of tort law and regulatory policy. I believe that the technical complexity of AI is quite similar to that of automotives or pharmaceuticals, and that our legal system's frameworks for those products should instruct how we approach AI. I'm also excited by the opportunities to use machine learning to advance empirical legal work---especially when this requires developing or improving existing methods.
+
+

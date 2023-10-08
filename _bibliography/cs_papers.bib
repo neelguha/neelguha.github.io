@@ -1,0 +1,161 @@
+---
+---
+
+
+@article{guha2023legalbench,
+  title    = {LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models},
+  author   = {Neel Guha and Julian Nyarko and Daniel E. Ho and Christopher Ré and Adam Chilton and Aditya Narayana and Alex Chohlas-Wood and Austin Peters and Brandon Waldon and Daniel N. Rockmore and Diego Zambrano and Dmitry Talisman and Enam Hoque and Faiz Surani and Frank Fagan and Galit Sarfaty and Gregory M. Dickinson and Haggai Porat and Jason Hegland and Jessica Wu and Joe Nudell and Joel Niklaus and John Nay and Jonathan H. Choi and Kevin Tobia and Margaret Hagan and Megan Ma and Michael Livermore and Nikon Rasumov-Rahe and Nils Holzenberger and Noam Kolt and Peter Henderson and Sean Rehaag and Sharad Goel and Shang Gao and Spencer Williams and Sunny Gandhi and Tom Zur and Varun Iyer and Zehua Li},
+  year     = {2023},
+  abbr     = {NeurIPS (D&B)},
+  journal  = {Advances in Neural Information Processing Systems},
+  abstract = {The advent of large language models (LLMs) and their adoption by the legal community has given rise to the question: what types of legal reasoning can LLMs perform? To enable greater study of this question, we present LegalBench: a collaboratively constructed legal reasoning benchmark consisting of 162 tasks covering six different types of legal reasoning. LegalBench was built through an interdisciplinary process, in which we collected tasks designed and hand-crafted by legal professionals. Because these subject matter experts took a leading role in construction, tasks either measure legal reasoning capabilities that are practically useful, or measure reasoning skills that lawyers find interesting. To enable cross-disciplinary conversations about LLMs in the law, we additionally show how popular legal frameworks for describing legal reasoning -- which distinguish between its many forms -- correspond to LegalBench tasks, thus giving lawyers and LLM developers a common vocabulary. This paper describes LegalBench, presents an empirical evaluation of 20 open-source and commercial LLMs, and illustrates the types of research explorations LegalBench enables.},
+  arxiv    = {2308.11462},
+  code     = {http://github.com/hazyresearch/legalbench},
+  website  = {http://hazyresearch.stanford.edu/legalbench/}
+}
+
+@article{guha2023embroid,
+  title    = {Embroid: Unsupervised Prediction Smoothing Can Improve Few-Shot Classification},
+  author   = {Guha, Neel and Chen, Mayee F and Bhatia, Kush and Mirhoseini, Azalia and Sala, Frederic and R{\'e}, Christopher},
+  journal  = {Advances in Neural Information Processing Systems},
+  year     = {2023},
+  abbr     = {NeurIPS},
+  year     = {2023},
+  abstract = {Recent work has shown that language models' (LMs) prompt-based learning capabilities make them well suited for automating data labeling in domains where manual annotation is expensive. The challenge is that while writing an initial prompt is cheap, improving a prompt is costly -- practitioners often require significant labeled data in order to evaluate the impact of prompt modifications. Our work asks whether it is possible to improve prompt-based learning without additional labeled data. We approach this problem by attempting to modify the predictions of a prompt, rather than the prompt itself. Our intuition is that accurate predictions should also be consistent: samples which are similar under some feature representation should receive the same prompt prediction. We propose Embroid, a method which computes multiple representations of a dataset under different embedding functions, and uses the consistency between the LM predictions for neighboring samples to identify mispredictions. Embroid then uses these neighborhoods to create additional predictions for each sample, and combines these predictions with a simple latent variable graphical model in order to generate a final corrected prediction. In addition to providing a theoretical analysis of Embroid, we conduct a rigorous empirical evaluation across six different LMs and up to 95 different tasks. We find that (1) Embroid substantially improves performance over original prompts (e.g., by an average of 7.3 points on GPT-JT), (2) also realizes improvements for more sophisticated prompting strategies (e.g., chain-of-thought), and (3) can be specialized to domains like law through the embedding functions.},
+  arxiv    = {2307.11031},
+  code     = {http://github.com/hazyresearch/embroid},
+  blog     = {https://hazyresearch.stanford.edu/blog/2023-08-12-embroid}
+}
+
+
+@article{li2023don,
+  title    = {Don’t Use a Cannon to Kill a Fly: An Efficient Cascading Pipeline for Long Documents},
+  author   = {Li, Zehua and Guha, Neel and Nyarko, Julian},
+  year     = {2023},
+  abbr     = {ICAIL},
+  journal  = {International Conference on AI and Law},
+  pdf      = {http://www.juliannyarko.com/papers/long_docs.pdf},
+  abstract = {The computational cost of transformer-based models has a quadratic dependence on the length of the input sequence. This makes it challenging to deploy these models in domains in which long documents are especially lengthy, such as the legal domain. To address this issue, we propose a three-stage cascading approach for long document classification. We begin by filtering out likely irrelevant information with a lightweight logistic regression model before passing the more challenging inputs to the transformer-based model. We evaluate our approach using CUAD, a legal dataset with 510 manually-annotated, long contracts. We find that the cascading approach reduces training time by up to 80% while improving baseline performance. We hypothesize that the gains in performance stem from localizing the classification task of the transformer model to particularly difficult examples.}
+}
+
+@article{henderson2022pile,
+  title    = {Pile of Law: Learning Responsible Data Filtering from the Law and a 256gb Open-source Legal Dataset},
+  author   = {Henderson, Peter and Krass, Mark and Zheng, Lucia and Guha, Neel and Manning, Christopher D and Jurafsky, Dan and Ho, Daniel},
+  journal  = {Advances in Neural Information Processing Systems},
+  volume   = {35},
+  pages    = {29217--29234},
+  year     = {2022},
+  abbr     = {NeurIPS (D&B)},
+  arxiv    = {2110.00486},
+  abstract = {One concern with the rise of large language models lies with their potential for significant harm, particularly from pretraining on biased, obscene, copyrighted, and private information. Emerging ethical approaches have attempted to filter pretraining material, but such approaches have been ad hoc and failed to take context into account. We offer an approach to filtering grounded in law, which has directly addressed the tradeoffs in filtering material. First, we gather and make available the Pile of Law, a ~256GB (and growing) dataset of open-source English-language legal and administrative data, covering court opinions, contracts, administrative rules, and legislative records. Pretraining on the Pile of Law may help with legal tasks that have the promise to improve access to justice. Second, we distill the legal norms that governments have developed to constrain the inclusion of toxic or private content into actionable lessons for researchers and discuss how our dataset reflects these norms. Third, we show how the Pile of Law offers researchers the opportunity to learn such filtering rules directly from the data, providing an exciting new research direction in model-based processing.},
+  website  = {https://huggingface.co/pile-of-law},
+  github   = {https://github.com/Breakend/PileOfLaw},
+}
+
+@article{liang2023holistic,
+  title    = {Holistic Evaluation of Language Models},
+  author   = {Percy Liang and Rishi Bommasani and Tony Lee and Dimitris Tsipras and Dilara Soylu and Michihiro Yasunaga and Yian Zhang and Deepak Narayanan and Yuhuai Wu and Ananya Kumar and Benjamin Newman and Binhang Yuan and Bobby Yan and Ce Zhang and Christian Alexander Cosgrove and Christopher D Manning and Christopher Re and Diana Acosta-Navas and Drew Arad Hudson and Eric Zelikman and Esin Durmus and Faisal Ladhak and Frieda Rong and Hongyu Ren and Huaxiu Yao and Jue WANG and Keshav Santhanam and Laurel Orr and Lucia Zheng and Mert Yuksekgonul and Mirac Suzgun and Nathan Kim and Neel Guha and Niladri S. Chatterji and Omar Khattab and Peter Henderson and Qian Huang and Ryan Andrew Chi and Sang Michael Xie and Shibani Santurkar and Surya Ganguli and Tatsunori Hashimoto and Thomas Icard and Tianyi Zhang and Vishrav Chaudhary and William Wang and Xuechen Li and Yifan Mai and Yuhui Zhang and Yuta Koreeda},
+  journal  = {Transactions on Machine Learning Research},
+  issn     = {2835-8856},
+  year     = {2023},
+  abstract = {Language models (LMs) are becoming the foundation for almost all major language technologies, but their capabilities, limitations, and risks are not well understood. We present Holistic Evaluation of Language Models (HELM) to improve the transparency of language models. First, we taxonomize the vast space of potential scenarios (i.e. use cases) and metrics (i.e. desiderata) that are of interest for LMs. Then we select a broad subset based on coverage and feasibility, noting what's missing or underrepresented (e.g. question answering for neglected English dialects, metrics for trustworthiness). Second, we adopt a multi-metric approach: We measure 7 metrics (accuracy, calibration, robustness, fairness, bias, toxicity, and efficiency) for each of 16 core scenarios when possible (87.5% of the time). This ensures metrics beyond accuracy don't fall to the wayside, and that trade-offs are clearly exposed. We also perform 7 targeted evaluations, based on 26 targeted scenarios, to analyze specific aspects (e.g. reasoning, disinformation). Third, we conduct a large-scale evaluation of 30 prominent language models (spanning open, limited-access, and closed models) on all 42 scenarios, 21 of which were not previously used in mainstream LM evaluation. Prior to HELM, models on average were evaluated on just 17.9% of the core HELM scenarios, with some prominent models not sharing a single scenario in common. We improve this to 96.0%: now all 30 models have been densely benchmarked on the same core scenarios and metrics under standardized conditions. Our evaluation surfaces 25 top-level findings. For full transparency, we release all raw model prompts and completions publicly for further analysis, as well as a general modular toolkit. We intend for HELM to be a living benchmark for the community, continuously updated with new scenarios, metrics, and models.},
+  abbr     = {TMLR},
+  website  = {https://crfm.stanford.edu/helm/latest/},
+  arxiv    = {2211.09110}
+}
+@article{arora2022ask,
+  title    = {Ask Me Anything: A Simple Strategy for Prompting Language Models},
+  author   = {Arora, Simran and Narayan, Avanika and Chen, Mayee F and Orr, Laurel J and Guha, Neel and Bhatia, Kush and Chami, Ines and Sala, Frederic and R{\'e}, Christopher},
+  journal  = {International Conference on Learning Representations},
+  year     = {2023},
+  abstract = {Large language models (LLMs) transfer well to new tasks out-of-the-box simply given a natural language prompt that demonstrates how to perform the task and no additional training. Prompting is a brittle process wherein small modifications to the prompt can cause large variations in the model predictions, and therefore significant effort is dedicated towards designing a painstakingly crafted "perfect prompt" for a task. To mitigate the high degree of effort, we instead ask whether collecting multiple decent, yet imperfect, prompts and aggregating them can lead to a high quality prompting strategy. Our observations motivate our proposed method, Ask Me Anything (AMA). We first develop an understanding of the effective prompt formats, finding question-answering (QA) prompts, which encourage open-ended generation ("Who went to the park?") tend to outperform those that restrict the model outputs ("John went to the park. True or False?"). AMA recursively uses the LLM to transform task inputs to the effective QA format. AM generates multiple questions per input and applies these prompts to collect several noisy "votes" for the input's true label. We find the prompts have varying accuracies and dependencies and thus propose to use weak supervision, a procedure for combining the noisy predictions, to produce the final predictions. We evaluate AMA across open-source model families (EleutherAI, BLOOM, OPT, and T0) and sizes (125M-175B parameters), demonstrating an average performance lift of 10.2\% over the few-shot baseline. This simple strategy enables the open-source GPT-J-6B model to match and exceed the performance of few-shot GPT3-175B  on 15 of 20 popular benchmarks. Averaged across these tasks, the GPT-J-6B model outperforms few-shot GPT3-175B.},
+  arxiv    = {2210.02441},
+  code     = {https://github.com/HazyResearch/ama_prompting},
+  abbr     = {ICLR},
+}
+
+@article{guha2022legalbench,
+  title         = {LegalBench: Prototyping a Collaborative Benchmark for Legal Reasoning},
+  author        = {Neel Guha and Daniel E. Ho and Julian Nyarko and Christopher Ré},
+  year          = {2022},
+  arxiv         = {2209.06120},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.AI},
+  abstract      = {Can foundation models be guided to execute tasks involving legal reasoning? We believe that building a benchmark to answer this question will require sustained collaborative efforts between the computer science and legal communities. To that end, this short paper serves three purposes. First, we describe how IRAC-a framework legal scholars use to distinguish different types of legal reasoning-can guide the construction of a Foundation Model oriented benchmark. Second, we present a seed set of 44 tasks built according to this framework. We discuss initial findings, and highlight directions for new tasks. Finally-inspired by the Open Science movement-we make a call for the legal and computer science communities to join our efforts by contributing new tasks.},
+  abbr          = {Preprint}
+}
+
+@article{bommasani2022opportunities,
+  title         = {On the Opportunities and Risks of Foundation Models},
+  author        = {Rishi Bommasani and Drew A. Hudson and Ehsan Adeli and Russ Altman and Simran Arora and Sydney von Arx and Michael S. Bernstein and Jeannette Bohg and Antoine Bosselut and Emma Brunskill and Erik Brynjolfsson and Shyamal Buch and Dallas Card and Rodrigo Castellon and Niladri Chatterji and Annie Chen and Kathleen Creel and Jared Quincy Davis and Dora Demszky and Chris Donahue and Moussa Doumbouya and Esin Durmus and Stefano Ermon and John Etchemendy and Kawin Ethayarajh and Li Fei-Fei and Chelsea Finn and Trevor Gale and Lauren Gillespie and Karan Goel and Noah Goodman and Shelby Grossman and Neel Guha and Tatsunori Hashimoto and Peter Henderson and John Hewitt and Daniel E. Ho and Jenny Hong and Kyle Hsu and Jing Huang and Thomas Icard and Saahil Jain and Dan Jurafsky and Pratyusha Kalluri and Siddharth Karamcheti and Geoff Keeling and Fereshte Khani and Omar Khattab and Pang Wei Koh and Mark Krass and Ranjay Krishna and Rohith Kuditipudi and Ananya Kumar and Faisal Ladhak and Mina Lee and Tony Lee and Jure Leskovec and Isabelle Levent and Xiang Lisa Li and Xuechen Li and Tengyu Ma and Ali Malik and Christopher D. Manning and Suvir Mirchandani and Eric Mitchell and Zanele Munyikwa and Suraj Nair and Avanika Narayan and Deepak Narayanan and Ben Newman and Allen Nie and Juan Carlos Niebles and Hamed Nilforoshan and Julian Nyarko and Giray Ogut and Laurel Orr and Isabel Papadimitriou and Joon Sung Park and Chris Piech and Eva Portelance and Christopher Potts and Aditi Raghunathan and Rob Reich and Hongyu Ren and Frieda Rong and Yusuf Roohani and Camilo Ruiz and Jack Ryan and Christopher Ré and Dorsa Sadigh and Shiori Sagawa and Keshav Santhanam and Andy Shih and Krishnan Srinivasan and Alex Tamkin and Rohan Taori and Armin W. Thomas and Florian Tramèr and Rose E. Wang and William Wang and Bohan Wu and Jiajun Wu and Yuhuai Wu and Sang Michael Xie and Michihiro Yasunaga and Jiaxuan You and Matei Zaharia and Michael Zhang and Tianyi Zhang and Xikun Zhang and Yuhui Zhang and Lucia Zheng and Kaitlyn Zhou and Percy Liang},
+  year          = {2021},
+  arxiv         = {2108.07258},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abbr          = {Preprint},
+  abstract      = {AI is undergoing a paradigm shift with the rise of models (e.g., BERT, DALL-E, GPT-3) that are trained on broad data at scale and are adaptable to a wide range of downstream tasks. We call these models foundation models to underscore their critically central yet incomplete character. This report provides a thorough account of the opportunities and risks of foundation models, ranging from their capabilities (e.g., language, vision, robotics, reasoning, human interaction) and technical principles(e.g., model architectures, training procedures, data, systems, security, evaluation, theory) to their applications (e.g., law, healthcare, education) and societal impact (e.g., inequity, misuse, economic and environmental impact, legal and ethical considerations). Though foundation models are based on standard deep learning and transfer learning, their scale results in new emergent capabilities,and their effectiveness across so many tasks incentivizes homogenization. Homogenization provides powerful leverage but demands caution, as the defects of the foundation model are inherited by all the adapted models downstream. Despite the impending widespread deployment of foundation models, we currently lack a clear understanding of how they work, when they fail, and what they are even capable of due to their emergent properties. To tackle these questions, we believe much of the critical research on foundation models will require deep interdisciplinary collaboration commensurate with their fundamentally sociotechnical nature.}
+}
+@article{zhang2021casehold,
+  author   = {Lucia Zheng and
+              Neel Guha and
+              Brandon R. Anderson and
+              Peter Henderson and
+              Daniel E. Ho},
+  title    = {When Does Pretraining Help? Assessing Self-Supervised Learning for
+              Law and the CaseHOLD Dataset},
+  journal  = {International Conference on AI and Law},
+  volume   = {abs/2104.08671},
+  year     = {2021},
+  arxiv    = {2104.08671},
+  abbr     = {ICAIL},
+  abstract = {While self-supervised learning has made rapid advances in natural language processing, it remains unclear when researchers should engage in resource-intensive domain-specific pretraining (domain pretraining). The law, puzzlingly, has yielded few documented instances of substantial gains to domain pretraining in spite of the fact that legal language is widely seen to be unique. We hypothesize that these existing results stem from the fact that existing legal NLP tasks are too easy and fail to meet conditions for when domain pretraining can help. To address this, we first present CaseHOLD (Case Holdings On Legal Decisions), a new dataset comprised of over 53,000+ multiple choice questions to identify the relevant holding of a cited case. This dataset presents a fundamental task to lawyers and is both legally meaningful and difficult from an NLP perspective (F1 of 0.4 with a BiLSTM baseline). Second, we assess performance gains on CaseHOLD and existing legal NLP datasets. While a Transformer architecture (BERT) pretrained on a general corpus (Google Books and Wikipedia) improves performance, domain pretraining (using corpus of approximately 3.5M decisions across all courts in the U.S. that is larger than BERT's) with a custom legal vocabulary exhibits the most substantial performance gains with CaseHOLD (gain of 7.2% on F1, representing a 12% improvement on BERT) and consistent performance gains across two other legal tasks. Third, we show that domain pretraining may be warranted when the task exhibits sufficient similarity to the pretraining corpus: the level of performance increase in three legal tasks was directly tied to the domain specificity of the task. Our findings inform when researchers should engage resource-intensive pretraining and show that Transformer-based architectures, too, learn embeddings suggestive of distinct legal language.},
+  github   = {https://github.com/reglab/casehold},
+  website  = {https://huggingface.co/casehold}
+}
+@inproceedings{coston2021leveraging,
+  title     = {Leveraging administrative data for bias audits: Assessing disparate coverage with mobility data for COVID-19 policy},
+  author    = {Coston, Amanda and Guha, Neel and Ouyang, Derek and Lu, Lisa and Chouldechova, Alexandra and Ho, Daniel E},
+  booktitle = {Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency},
+  pages     = {173--184},
+  year      = {2021},
+  arxiv     = {2011.07194},
+  abstract  = {Anonymized smartphone-based mobility data has been widely adopted in devising and evaluating COVID-19 response strategies such as the targeting of public health resources. Yet little attention has been paid to measurement validity and demographic bias, due in part to the lack of documentation about which users are represented as well as the challenge of obtaining ground truth data on unique visits and demographics. We illustrate how linking large-scale administrative data can enable auditing mobility data for bias in the absence of demographic information and ground truth labels. More precisely, we show that linking voter roll data -- containing individual-level voter turnout for specific voting locations along with race and age -- can facilitate the construction of rigorous bias and reliability tests. These tests illuminate a sampling bias that is particularly noteworthy in the pandemic context: older and non-white voters are less likely to be captured by mobility data. We show that allocating public health resources based on such mobility data could disproportionately harm high-risk elderly and minority groups.},
+  abbr      = {FAccT}
+}
+@article{orr2021bootleg,
+  author  = {Laurel J. Orr and
+             Megan Leszczynski and
+             Simran Arora and
+             Sen Wu and
+             Neel Guha and
+             Xiao Ling and
+             Christopher R{\'{e}}},
+  title   = {Bootleg: Chasing the Tail with Self-Supervised Named Entity Disambiguation},
+  journal = {Conference on Innovative Data Systems Research},
+  year    = {2021},
+  arxiv   = {2010.10363},
+  website = {https://hazyresearch.stanford.edu/bootleg/},
+  abbr    = {CIDR},
+  pdf     = {https://www.cidrdb.org/cidr2021/papers/cidr2021_paper13.pdf},
+  code    = {https://github.com/HazyResearch/bootleg},
+  blog    = {http://ai.stanford.edu/blog/bootleg/},
+  abstract     = {A challenge for named entity disambiguation (NED), the task of mapping textual mentions to entities in a knowledge base, is how to disambiguate entities that appear rarely in the training data, termed tail entities. Humans use subtle reasoning patterns based on knowledge of entity facts, relations, and types to disambiguate unfamiliar entities. Inspired by these patterns, we introduce Bootleg, a self-supervised NED system that is explicitly grounded in reasoning patterns for disambiguation. We define core reasoning patterns for disambiguation, create a learning procedure to encourage the self-supervised model to learn the patterns, and show how to use weak supervision to enhance the signals in the training data. Encoding the reasoning patterns in a simple Transformer architecture, Bootleg meets or exceeds state-of-the-art on three NED benchmarks. We further show that the learned representations from Bootleg successfully transfer to other non-disambiguation tasks that require entity-based knowledge: we set a new state-of-the-art in the popular TACRED relation extraction task by 1.0 F1 points and demonstrate up to 8% performance lift in highly optimized production search and assistant tasks at a major technology company}
+}
+@article{guha2019machine,
+      title={Machine Learning for AC Optimal Power Flow}, 
+      author={Neel Guha and Zhecheng Wang and Matt Wytock and Arun Majumdar},
+      year={2019},
+      arxiv={1910.08842},
+      abstract={We explore machine learning methods for AC Optimal Powerflow (ACOPF) - the task of optimizing power generation in a transmission network according while respecting physical and engineering constraints. We present two formulations of ACOPF as a machine learning problem: 1) an end-to-end prediction task where we directly predict the optimal generator settings, and 2) a constraint prediction task where we predict the set of active constraints in the optimal solution. We validate these approaches on two benchmark grids.},
+      journal={Climate Change Workshop at the International Conference on Machine Learning},
+      abbr={Workshop},
+}
+@article{guha2019oneshot,
+      title={One-Shot Federated Learning}, 
+      author={Neel Guha and Ameet Talwalkar and Virginia Smith},
+      year={2019},
+      arxiv={1902.11175},
+      abstract={We present one-shot federated learning, where a central server learns a global model over a network of federated devices in a single round of communication. Our approach - drawing on ensemble learning and knowledge aggregation - achieves an average relative gain of 51.5% in AUC over local baselines and comes within 90.1% of the (unattainable) global ideal. We discuss these methods and identify several promising directions of future work.},
+      journal={2nd Workshop on Machine Learning on the Phone and other Consumer Devices at Neural Information Processing Systems},
+      abbr={Workshop}
+}
