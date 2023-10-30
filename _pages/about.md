@@ -20,6 +20,6 @@ I am a fourth year JD-PhD student in Computer Science at Stanford University (ad
 
 My computer science work explores (1) legal applications of large language models, and (2) methods for enabling machine learning systems to better leverage structure (e.g., type information, knowledge base triples, embeddings). My recent work includes leading the creation of <a href="https://hazyresearch.stanford.edu/legalbench/">LegalBench</a>, a large scale open effort to develop benchmark tasks for evaluating legal reasoning in LLMs. 
 
-On the law side, my work explores AI through the lens of tort law and regulatory policy. I am interested in how different technical aspects of AI might inform the approaches that courts and regulators take. I am also excited by the opportunities to use machine learning to advance empirical legal work---especially when this requires developing or improving existing methods.
+On the law side, I am interested in how different technical aspects of AI might inform the approaches that courts and regulators take to regulation. I am also excited by the opportunities to use machine learning to advance empirical legal work---especially when this requires developing or improving existing methods.
 
 
