@@ -11,6 +11,8 @@ nav_order: 1
 
 Jump to <a href="#law">law and policy work</a>, <a href="#cs">computer science publications</a>,  or <a href="#chapters">textbook chapters</a>.
 
+PDFs available on request for paywalled publications.
+
 <div class="publications">
 <h3 id="law">law and policy</h3>
 {% bibliography -f {{ site.scholar.law_bibliography }} %}
