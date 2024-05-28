@@ -15,3 +15,8 @@ My legal research agenda has two focuses. First, I am interested in using machin
 
 
 Second, I am interested in AI governance. As AI proliferates across sectors (e.g., healthcare, finance, energy), the types of AI systems deployed will be guided by standards fashioned by both regulators and courts. My work attempts to describe how these stakeholders can approach governance choices in a technically and legally principled way. For instance, I've written about how [courts might assess liability for medical AI](https://www.nejm.org/doi/full/10.1056/NEJMhle2308901?query=featured_home), and the [technical/institutional tradeoffs](https://dho.stanford.edu/wp-content/uploads/AI_Regulation.pdf) raised by different regulatory mechanisms.
+
+<h2> Recent News</h2>
+- **May 2024**: Two papers accepted to ICML 2024: (1) [Prospectors](https://arxiv.org/abs/2402.11729), and (2) [Long-Context Retrievers](https://arxiv.org/abs/2402.07440).
+- **January 2024**: ["Understanding Liability Risk from Using Health Care Artificial Intelligence Tools"](https://www.nejm.org/doi/full/10.1056/NEJMhle2308901?query=featured_home) out in The New England Journal of Medicine (with Michelle Mello).
+- **January 2024**: ["Private Enforcement in the States"](https://scholarship.law.upenn.edu/penn_law_review/vol172/iss1/2/) out in University of Pennsylvania Law Review (with Diego Zambrano, Austin Peters, and Jeffrey Xia).
