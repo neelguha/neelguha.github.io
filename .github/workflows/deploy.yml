@@ -28,11 +28,11 @@ jobs:
         bundler-cache: true
     - name: Install and Build 🔧
       run: |
-        gem install bundler:2.2.34
         pip3 install --upgrade jupyter
         npm install -g mermaid.cli
         export JEKYLL_ENV=production
         bundle exec jekyll build
+        gem install bundler:2.2.34
     - name: Deploy 🚀
       if: github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4
