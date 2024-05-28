@@ -1,0 +1,68 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Neel Guha&apos;s Personal Website",
+    "home_page_url": "https://jekyll-academic.netlify.app/",
+    "feed_url": "https://jekyll-academic.netlify.app/feed.json",
+    "description": "Neel Guha's Personal Website",
+    "icon": "https://jekyll-academic.netlify.app/apple-touch-icon.png",
+    "favicon": "https://jekyll-academic.netlify.app/favicon.ico",
+    "expired": false,
+    
+    "author":  {
+        "name": "Neel Guha",
+        "url": null,
+        "avatar": null
+    },
+    
+"items": [
+    
+        {
+            "id": "https://jekyll-academic.netlify.app/2021/05/01/test-post-2",
+            "title": "Test post with responsive images",
+            "summary": null,
+            "content_text": "\"Toronto skyline.\" by Bernard Spragg is marked under CC0 1.0.The code for this page is:---layout: postusehighlight: truetags: [Images, Jekyll-blog]title: Test post with responsive images---&lt;img style=\"display: block;\" class=\"img-fluid\" src=\"https://live.staticflickr.com/65535/48993906211_1534a8f85d_b.jpg\" alt=\"Toronto skyline.\"&gt;&lt;p class=\"small\"&gt;\"Toronto skyline.\" by Bernard Spragg is marked under CC0 1.0.&lt;/p&gt;To make images responsive in any post, use the HTML image element and add a class attribute of img-fluid.",
+            "content_html": "<p><img style=\"display: block;\" class=\"img-fluid\" src=\"https://live.staticflickr.com/65535/48993906211_1534a8f85d_b.jpg\" alt=\"Toronto skyline.\" /></p><p class=\"small\">\"Toronto skyline.\" by Bernard Spragg is marked under CC0 1.0.</p><p>The code for this page is:</p><pre><code class=\"language-html\">---layout: postusehighlight: truetags: [Images, Jekyll-blog]title: Test post with responsive images---&lt;img style=\"display: block;\" class=\"img-fluid\" src=\"https://live.staticflickr.com/65535/48993906211_1534a8f85d_b.jpg\" alt=\"Toronto skyline.\"&gt;&lt;p class=\"small\"&gt;\"Toronto skyline.\" by Bernard Spragg is marked under CC0 1.0.&lt;/p&gt;</code></pre><p>To make images responsive in any post, use the HTML image element and add a class attribute of <code>img-fluid</code>.</p>",
+            "url": "https://jekyll-academic.netlify.app/2021/05/01/test-post-2",
+            
+            
+            
+            "tags": ["Images","Jekyll-blog"],
+            
+            "date_published": "2021-05-01T00:00:00+00:00",
+            "date_modified": "2021-05-01T00:00:00+00:00",
+            
+                "author":  {
+                "name": "Neel Guha",
+                "url": null,
+                "avatar": null
+                }
+                
+            
+        },
+    
+        {
+            "id": "https://jekyll-academic.netlify.app/2021/04/30/test-post-1",
+            "title": "First post with code snippets",
+            "summary": null,
+            "content_text": "This post was posted on May 1st 2021.Want to add code snippets?#include &lt;iostream&gt;int main(){  std::cout&lt;&lt;\"Well now you can!\"&lt;&lt;std::endl;}Here’s the frontmatter for this page:---layout: postusehighlight: truetags: [First post, Test]title: First post with code snippets---",
+            "content_html": "<p>This post was posted on May 1<sup>st</sup> 2021.</p><p>Want to add code snippets?</p><pre><code class=\"language-c++\">#include &lt;iostream&gt;int main(){  std::cout&lt;&lt;\"Well now you can!\"&lt;&lt;std::endl;}</code></pre><p>Here’s the frontmatter for this page:</p><pre><code class=\"language-yaml\">---layout: postusehighlight: truetags: [First post, Test]title: First post with code snippets---</code></pre>",
+            "url": "https://jekyll-academic.netlify.app/2021/04/30/test-post-1",
+            
+            
+            
+            "tags": ["First post","Test"],
+            
+            "date_published": "2021-04-30T00:00:00+00:00",
+            "date_modified": "2021-04-30T00:00:00+00:00",
+            
+                "author":  {
+                "name": "Neel Guha",
+                "url": null,
+                "avatar": null
+                }
+                
+            
+        }
+    
+    ]
+}

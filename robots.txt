@@ -1,4 +1,1 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://neelguha.github.io/sitemap.xml
+Sitemap: https://jekyll-academic.netlify.app/sitemap.xml
