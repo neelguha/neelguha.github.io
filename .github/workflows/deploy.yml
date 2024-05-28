@@ -30,6 +30,7 @@ jobs:
       run: |
         gem install jekyll
         pip3 install --upgrade jupyter
+        bundle _2.2.34_ install
         npm install -g mermaid.cli
         export JEKYLL_ENV=production
         bundle install
