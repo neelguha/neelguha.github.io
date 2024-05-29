@@ -10,16 +10,16 @@
         <b>{{entry.chapter}}</b>
     {%- endif %}
 {%- else -%}
-    {%- if entry.arxiv %}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" ><b>{{entry.title}}</b></a>
-    {%- elsif entry.ssrn %}
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id={{ entry.ssrn }}" ><b>{{entry.title}}</b></a>
-    {%- elsif entry.pdf %}
+    {%- if entry.pdf %}
         {% if entry.pdf contains '://' -%}
             <a href="{{ entry.pdf }}"><b>{{entry.title}}</b></a>
         {%- else -%}
             <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}"><b>{{entry.title}}</b></a>
         {%- endif %}
+    {%- elsif entry.arxiv %}
+        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" ><b>{{entry.title}}</b></a>
+    {%- elsif entry.ssrn %}
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id={{ entry.ssrn }}" ><b>{{entry.title}}</b></a>
     {%- else -%}
         <b>{{entry.title}}</b>
     {%- endif -%}
