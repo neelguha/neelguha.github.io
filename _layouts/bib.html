@@ -4,8 +4,12 @@
 
  <!-- Title -->
  {% if entry.type == "inbook" -%}
-    {% if entry.pdf contains '://' -%}
-        <a href="{{ entry.pdf }}"><b>{{entry.chapter}}</b></a>
+    {%- if entry.pdf %}
+      {% if entry.pdf contains '://' -%}
+          <a href="{{ entry.pdf }}"><b>{{entry.chapter}}</b></a>
+      {%- else -%}
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}"><b>{{entry.chapter}}</b></a>
+      {%- endif %}
     {%- else -%}
         <b>{{entry.chapter}}</b>
     {%- endif %}
