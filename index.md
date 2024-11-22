@@ -18,7 +18,7 @@ Second, I am interested in AI governance. As AI proliferates across sectors (e.g
 
 <h2> Recent News</h2>
 - **November 2024**: Diego Zambrano and I have a [short piece](./assets/pdf/state_statutes_db.pdf) out in the Wisconsin Law Review talking about a new empirical project that uses LLMs to build an annotated database of state statutes!
-- **October 2024**: Michelle Mello and I appeared on the [Stanford Legal podcast](https://law.stanford.edu/stanford-legal-podcast/exploring-ai-in-healthcare-legal-regulatory-and-safety-challenges/) (hosted by Professor Pam Karlan and ProfessorRich Ford) to talk about our work on AI liability in healthcare!
+- **October 2024**: Michelle Mello and I appeared on the [Stanford Legal podcast](https://law.stanford.edu/stanford-legal-podcast/exploring-ai-in-healthcare-legal-regulatory-and-safety-challenges/) (hosted by Professor Pam Karlan and Professor Rich Ford) to talk about our work on AI liability in healthcare!
 - **September 2024**: Our work on [learning unsupervised routers](https://openreview.net/forum?id=pPSWHsgqRp) for LLMs accepted to NeurIPS 2024!
 - **July 2024**: Excited to contribute to [Open Problems in Technical AI Governance](https://arxiv.org/abs/2407.14981)!
 - **May 2024**: Excited to contribute a [chapter](https://neelguha.github.io/assets/pdf/building_genai_benchmarks_for_law_oxford_chapter.pdf) on benchmarking language models for legal applications to The Oxford Handbook on the Foundations and Regulation of Generative AI (OUP, 2024).
