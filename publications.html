@@ -1,0 +1,219 @@
+---
+layout: default
+title: Home
+---
+<br>
+<h4>Publications</h4>
+<p>Please find all publications on my <a href="https://scholar.google.com/citations?user=YI5N4HQAAAAJ&hl=en" target="_blank">Google Scholar</a>.  </p>
+<p>* denotes equal contributions.</p>
+
+<ul class="tab-nav">
+  <li><div class="button active" data-ref="#papers-sel">Selected and Recent Papers</div></li>
+  <li><div class="button" data-ref="#papers-law">Law</div></li>
+  <li><div class="button" data-ref="#papers-cs">Computer Science</div></li>
+  <li><div class="button" data-ref="#papers-all">All</div></li>    
+</ul>
+
+<div class="tab-content">
+
+  <!-- Selected and Recent Papers -->
+  <div class="tab-pane active" id="papers-sel">
+    {% assign papers = site.data.publications.papers | where: "selected", "y" %}
+    {% for paper in papers %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b>
+          {% if paper.paper_pdf %}
+            <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">PDF</a>
+          {% endif %}
+          {% if paper.pap %}
+            <a class="button" href="{{ paper.pap }}" target="_blank">Preregistration</a>
+          {% endif %}
+          {% if paper.slides %}
+            <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+          {% endif %}
+          {% if paper.poster %}
+            <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+          {% endif %}
+          {% if paper.video %}
+            <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %}
+          {% if paper.code %}
+            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
+          {% if paper.website %}
+            <a class="button" href="{{ paper.website }}" target="_blank">Website</a>
+          {% endif %}
+          {% if paper.blog %}
+            <a class="button" href="{{ paper.blog }}" target="_blank">Blog</a>
+          {% endif %}
+          {% if paper.policy_brief %}
+            <a class="button" href="{{ paper.policy_brief }}" target="_blank">Policy Brief</a>
+          {% endif %}
+        </p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i> ({{ paper.year }})</p>
+        <p><i>{{ paper.extra_venue }}</i></p>
+        {% if paper.award %}
+          <p><b style="color:#4682b4">{{ paper.award }}</b></p>
+        {% endif %}
+        {% if paper.news %}
+          <p><b style="color:#4682b4">{{ paper.news }}</b></p>
+        {% endif %}
+          <div class="paper-buttons">
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+<!-- Law Papers -->
+<div class="tab-pane" id="papers-law">
+  {% assign papers = site.data.publications.papers | where: "law", "y" %}
+  {% for paper in papers %}
+    <div class="paper">
+      <p class="title"><b>{{ paper.title }}</b>
+        {% if paper.paper_pdf %}
+          <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">PDF</a>
+        {% endif %}
+        {% if paper.pap %}
+          <a class="button" href="{{ paper.pap }}" target="_blank">Preregistration</a>
+        {% endif %}
+        {% if paper.slides %}
+          <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+        {% endif %}
+        {% if paper.poster %}
+          <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+        {% endif %}
+        {% if paper.video %}
+          <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+        {% endif %}
+        {% if paper.code %}
+          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+        {% endif %}
+        {% if paper.website %}
+          <a class="button" href="{{ paper.website }}" target="_blank">Website</a>
+        {% endif %}
+        {% if paper.blog %}
+          <a class="button" href="{{ paper.blog }}" target="_blank">Blog</a>
+        {% endif %}
+        {% if paper.policy_brief %}
+          <a class="button" href="{{ paper.policy_brief }}" target="_blank">Policy Brief</a>
+        {% endif %}
+      </p>
+      <p>{{ paper.authors }}</p>
+      <p><i>{{ paper.venue }}</i> ({{ paper.year }})</p>
+      <p><i>{{ paper.extra_venue }}</i></p>
+      {% if paper.award %}
+        <p><b style="color:#4682b4">{{ paper.award }}</b></p>
+      {% endif %}
+      {% if paper.news %}
+        <p><b style="color:#4682b4">{{ paper.news }}</b></p>
+      {% endif %}
+        <div class="paper-buttons">
+
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+  <!-- Computer Science Papers -->
+  <div class="tab-pane" id="papers-cs">
+    {% assign papers = site.data.publications.papers | where: "cs", "y" %}
+    {% for paper in papers %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b>
+          {% if paper.paper_pdf %}
+            <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">PDF</a>
+          {% endif %}
+          {% if paper.pap %}
+            <a class="button" href="{{ paper.pap }}" target="_blank">Preregistration</a>
+          {% endif %}
+          {% if paper.slides %}
+            <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+          {% endif %}
+          {% if paper.poster %}
+            <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+          {% endif %}
+          {% if paper.video %}
+            <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %}
+          {% if paper.code %}
+            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
+          {% if paper.website %}
+            <a class="button" href="{{ paper.website }}" target="_blank">Website</a>
+          {% endif %}
+          {% if paper.blog %}
+            <a class="button" href="{{ paper.blog }}" target="_blank">Blog</a>
+          {% endif %}
+          {% if paper.policy_brief %}
+            <a class="button" href="{{ paper.policy_brief }}" target="_blank">Policy Brief</a>
+          {% endif %}
+        </p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i> ({{ paper.year }})</p>
+        <p><i>{{ paper.extra_venue }}</i></p>
+        {% if paper.award %}
+          <p><b style="color:#4682b4">{{ paper.award }}</b></p>
+        {% endif %}
+        {% if paper.news %}
+          <p><b style="color:#4682b4">{{ paper.news }}</b></p>
+        {% endif %}
+          <div class="paper-buttons">
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- All PAPERS -->
+  <div class="tab-pane" id="papers-all">
+    {% assign papers = site.data.publications.papers %}
+    {% for paper in papers %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b>
+          {% if paper.paper_pdf %}
+            <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">PDF</a>
+          {% endif %}
+          {% if paper.pap %}
+            <a class="button" href="{{ paper.pap }}" target="_blank">Preregistration</a>
+          {% endif %}
+          {% if paper.slides %}
+            <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+          {% endif %}
+          {% if paper.poster %}
+            <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+          {% endif %}
+          {% if paper.video %}
+            <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %}
+          {% if paper.code %}
+            <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
+          {% if paper.website %}
+            <a class="button" href="{{ paper.website }}" target="_blank">Website</a>
+          {% endif %}
+          {% if paper.blog %}
+            <a class="button" href="{{ paper.blog }}" target="_blank">Blog</a>
+          {% endif %}
+          {% if paper.policy_brief %}
+            <a class="button" href="{{ paper.policy_brief }}" target="_blank">Policy Brief</a>
+          {% endif %}
+        </p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i></p>
+        <p><i>{{ paper.extra_venue }}</i> ({{ paper.year }})</p>
+        {% if paper.award %}
+        <p><b style="color:#4682b4">{{ paper.award }}</b></p>
+        {% endif %}
+        {% if paper.news %}
+          <p><b style="color:#4682b4">{{ paper.news }}</b></p>
+        {% endif %}
+        <div class="paper-buttons">
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+

@@ -1,68 +1,7 @@
-title: Neel Guha # Your site title
-navbar_title: ""
-
-author:
-  name: Neel Guha # Your name
-  email: nguha@cs.stanford.edu
-
-description: Neel Guha's Personal Website # description of your site
-
-url: "https://jekyll-academic.netlify.app" # The base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # The subpath of your site, e.g. /blog
-
-jekyllacademic:
-  homepage_title: "Neel Guha" # Your homepage title
-  disqusname: # Your disqus sitename
-  footer: Neel Guha, 2024 # Your name, Year
-  contentlicense: "MIT" # Choose either one of these to put: MIT, Commons Clause, CC BY 4.0, CC BY-NC 4.0, CC BY-ND 4.0, CC BY-NC-ND 4.0, CC BY-NC-SA 4.0, CC BY-NC-SA 4.0, CC BY-SA 4.0
-
-# No need to edit this part, however if you want to, that's fine as well
-
-permalink: pretty
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    disable: true
+source:      .
+destination: ./_site
+includes:    ./_includes
 
 collections:
-  pages:
-    output: true
-    permalink: /:name
-  posts:
-    output: true
-    permalink: /:year/:month/:day/:slug
   projects:
     output: true
-    permalink: /:collection/:title
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-scholar
-
-# -----------------------------------------------------------------------------
-# Jekyll Scholar
-# -----------------------------------------------------------------------------
-# https://github.com/inukshuk/jekyll-scholar/blob/main/lib/jekyll/scholar/defaults.rb#L22
-scholar:
-
-  last_name: [Guha]
-  first_name: [Neel]
-
-  #style: apa
-  locale: en
-
-  source: ./_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-  bibliography_list_tag: "p" # Makes the bibliography an unnumbered list
-  bibliography_item_tag: "p"
-
-  details_dir: bibliography
-  details_layout: bibtex.html
-  #details_link: Details
-
-  query: "@*"
-  group_by: year
-  group_order: descending

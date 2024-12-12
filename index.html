@@ -1,0 +1,62 @@
+---
+layout: default
+title: Home
+---
+<div class="docs-section" id="bio">
+<p>
+    I am a fifth year JD-PhD student in Computer Science at Stanford University (advised by <a href="https://cs.stanford.edu/~chrismre/">Chris Ré</a>). I'm a part of the <a href="https://hazyresearch.stanford.edu/">Hazy Research Lab</a>, <a href="https://crfm.stanford.edu/">Stanford Center for Research on Foundation Models</a>, and <a href="https://reglab.stanford.edu/">RegLab</a>. I graduated with a MS in Machine Learning from Carnegie Mellon University ('19) and a BS (with Honors) in Computer Science from Stanford University ('18). I am grateful to be supported by the <a href="https://vpge.stanford.edu/fellowships-funding/sigf">Stanford Interdisciplinary Graduate Fellowship (SIGF)</a> and the <a href= "https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows">HAI Graduate Fellowship</a>. 
+</p>
+<p>
+My research lies at the intersection of artificial intelligence/machine learning (AI/ML) and law. Specifically, I explore:
+</p>
+<style>
+  .custom-list {
+    list-style-type: disc;
+    margin-left: 40px;
+    color: #333; /* Darker color for bullets */
+  }
+</style>
+<p>
+<ul class="custom-list">
+    <li>
+        <b>What types of legal reasoning tasks can large language models (LLMs) perform effectively?</b> 
+        I’ve contributed to the development of benchmarks that evaluate LLM performance on diverse legal reasoning and data tasks. These include 
+        <a href="https://hazyresearch.stanford.edu/legalbench/">LegalBench</a>, 
+        <a href="http://arxiv.org/abs/2104.08671">CaseHOLD</a>, and 
+        <a href="https://arxiv.org/abs/2402.07440">LoCo</a>.
+    </li>
+    <li>
+        <b>How can LLM performance be improved without labeled data or human supervision?</b> 
+        I investigate techniques that leverage auxiliary information (e.g., embeddings) to enhance model performance in unsupervised or weakly supervised settings. Examples of this work include 
+        <a href="https://arxiv.org/abs/2412.04692">Smoothie</a>, 
+        <a href="http://arxiv.org/abs/2307.11031">Embroid</a>, and 
+        <a href="https://www.cidrdb.org/cidr2021/papers/cidr2021_paper13.pdf">Bootleg</a>.
+    </li>
+    <li>
+        <b>How can machine learning advance our understanding of the law and legal institutions?</b> 
+        Empirical legal research often faces bottlenecks due to the cost and time of manual data coding. My work explores how machine learning can help construct large-scale datasets more efficiently, such as 
+        <a href="https://scholarship.law.upenn.edu/penn_law_review/vol172/iss1/2/">measuring private enforcement across states</a> and building an 
+        <a href="https://wlr.law.wisc.edu/wp-content/uploads/sites/1263/2024/11/8-Guha-Zambrano-Camera-Ready.pdf">annotated database of state statutes</a>.
+    </li>
+    <li>
+        <b>How should we govern AI?</b> 
+        I examine how AI systems, particularly in sensitive domains like healthcare, can be effectively regulated. My research includes frameworks for assessing 
+        <a href="https://www.nejm.org/doi/full/10.1056/NEJMhle2308901?query=featured_home">liability for medical AI</a> and analyzing the 
+        <a href="https://dho.stanford.edu/wp-content/uploads/AI_Regulation.pdf">technical and institutional trade-offs</a> associated with traditional regulatory interventions, such as disclosure and licensing.
+    </li>
+</ul>
+</p>
+</div>
+
+<div class="docs-section" id="news">
+<h4>Recent News</h4>
+{% assign current_talks = site.data.news.news | where: "category", "current" %}
+{% for talk in current_talks %}
+  <b>{{ talk.time }}</b>: {{ talk.events }}</a> </br>
+{% endfor %}
+</div>
+  
+<div class="docs-section" id="ack">
+<p>
+  Website design and template by <a href="https://github.com/msaveski/www_personal">Martin Saveski</a>.
+</p>

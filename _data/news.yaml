@@ -1,0 +1,32 @@
+news:
+    - time: "November 2024"
+      events: "Diego Zambrano and I have a <a href='https://wlr.law.wisc.edu/wp-content/uploads/sites/1263/2024/11/8-Guha-Zambrano-Camera-Ready.pdf'>short piece</a> out in the Wisconsin Law Review talking about a new empirical project that uses LLMs to build an annotated database of state statutes!"
+      category: "current"
+
+    - time: "October 2024"
+      events: "Michelle Mello and I appeared on the <a href='https://law.stanford.edu/stanford-legal-podcast/exploring-ai-in-healthcare-legal-regulatory-and-safety-challenges/'>Stanford Legal Podcast</a> (hosted by Professor Pam Karlan and Professor Rich Ford) to talk about our work on AI liability in healthcare!"
+      category: "current"
+
+    - time: "September 2024"
+      events: "Our work on <a href='https://arxiv.org/abs/2412.04692'>learning unsupervised routers</a> for LLMs accepted to NeurIPS 2024!"
+      category: "current"
+
+    - time: "July 2024"
+      events: "Excited to contribute to <a href='https://arxiv.org/abs/2407.14981'>Open Problems in Technical AI Governance</a>!"
+      category: "current"
+
+    - time: "May 2024"
+      events: "Excited to contribute a <a href='https://neelguha.github.io/assets/pdf/building_genai_benchmarks_for_law_oxford_chapter.pdf'>chapter</a> on benchmarking language models for legal applications to The Oxford Handbook on the Foundations and Regulation of Generative AI (OUP, 2024)."
+      category: "current"
+
+    - time: "May 2024"
+      events: "Two papers accepted to ICML 2024: (1) <a href='https://arxiv.org/abs/2402.11729'>Prospectors</a>, and (2) <a href='https://arxiv.org/abs/2402.07440'>Long-Context Retrievers</a>."
+      category: "current"
+
+    - time: "January 2024"
+      events: "<a href='https://www.nejm.org/doi/full/10.1056/NEJMhle2308901?query=featured_home'>Understanding Liability Risk from Using Health Care Artificial Intelligence Tools</a> out in The New England Journal of Medicine (with Michelle Mello)."
+      category: "current"
+
+    - time: "January 2024"
+      events: "<a href='https://scholarship.law.upenn.edu/penn_law_review/vol172/iss1/2/'>Private Enforcement in the States</a> out in University of Pennsylvania Law Review (with Diego Zambrano, Austin Peters, and Jeffrey Xia)."
+      category: "current"
