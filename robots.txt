@@ -1,1 +1,0 @@
-Sitemap: https://jekyll-academic.netlify.app/sitemap.xml
