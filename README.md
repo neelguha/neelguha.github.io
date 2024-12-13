@@ -12,7 +12,8 @@ Change one of the files in `_data`, unless you are changing the look of the webs
 
 Test changes with:
 ```
-jekyll serve
+chruby 3.3.1
+bundle exec jekyll serve
 ```
 
 ## External Libraries

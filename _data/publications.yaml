@@ -159,6 +159,7 @@ papers:
     paper_pdf: "https://arxiv.org/abs/2210.02441"
     code: "https://github.com/HazyResearch/ama_prompting"
     cs: y
+    award: "Spotlight"
 
   - title: "Vulnerabilities in Discovery Tech"
     authors: "<u>Neel Guha</u>, Peter Henderson, Diego Zambrano"
@@ -184,6 +185,7 @@ papers:
     code: "https://github.com/Breakend/PileOfLaw"
     cs: y
     news: "Featured in <a href='https://news.bloomberglaw.com/ip-law/federal-use-of-ai-tools-prompts-researchers-to-build-new-dataset'>Bloomberg Law</a>, <a href='https://hai.stanford.edu/news/borrowing-law-filter-training-data-foundation-models'>Stanford HAI</a>, and <a href='https://fivethirtyeight.com/features/the-datasets-were-looking-at-this-week-9/'>FiveThirtyEight</a>."
+    award: "Oral Presentation"
 
   - title: "On the Opportunities and Risks of Foundation Models"
     authors: "Rishi Bommasani, Drew A. Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S. Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, Erik Brynjolfsson, Shyamal Buch, Dallas Card, Rodrigo Castellon, Niladri Chatterji, Annie Chen, Kathleen Creel, Jared Quincy Davis, Dora Demszky, Chris Donahue, Moussa Doumbouya, Esin Durmus, Stefano Ermon, John Etchemendy, Kawin Ethayarajh, Li Fei-Fei, Chelsea Finn, Trevor Gale, Lauren Gillespie, Karan Goel, Noah Goodman, Shelby Grossman, <u>Neel Guha</u>, Tatsunori Hashimoto, Peter Henderson, John Hewitt, Daniel E. Ho, Jenny Hong, Kyle Hsu, Jing Huang, Thomas Icard, Saahil Jain, Dan Jurafsky, Pratyusha Kalluri, Siddharth Karamcheti, Geoff Keeling, Fereshte Khani, Omar Khattab, Pang Wei Koh, Mark Krass, Ranjay Krishna, Rohith Kuditipudi, Ananya Kumar, Faisal Ladhak, Mina Lee, Tony Lee, Jure Leskovec, Isabelle Levent, Xiang Lisa Li, Xuechen Li, Tengyu Ma, Ali Malik, Christopher D. Manning, Suvir Mirchandani, Eric Mitchell, Zanele Munyikwa, Suraj Nair, Avanika Narayan, Deepak Narayanan, Ben Newman, Allen Nie, Juan Carlos Niebles, Hamed Nilforoshan, Julian Nyarko, Giray Ogut, Laurel Orr, Isabel Papadimitriou, Joon Sung Park, Chris Piech, Eva Portelance, Christopher Potts, Aditi Raghunathan, Rob Reich, Hongyu Ren, Frieda Rong, Yusuf Roohani, Camilo Ruiz, Jack Ryan, Christopher Ré, Dorsa Sadigh, Shiori Sagawa, Keshav Santhanam, Andy Shih, Krishnan Srinivasan, Alex Tamkin, Rohan Taori, Armin W. Thomas, Florian Tramèr, Rose E. Wang, William Wang, Bohan Wu, Jiajun Wu, Yuhuai Wu, Sang Michael Xie, Michihiro Yasunaga, Jiaxuan You, Matei Zaharia, Michael Zhang, Tianyi Zhang, Xikun Zhang, Yuhui Zhang, Lucia Zheng, Kaitlyn Zhou, Percy Liang"
@@ -225,6 +227,7 @@ papers:
     year: 2019
     paper_pdf: "https://arxiv.org/abs/1910.08842"
     cs: y
+    award: "Honorable Mention for Best Paper"
 
   - title: "One-Shot Federated Learning"
     authors: "<u>Neel Guha</u>, Ameet Talwalkar, Virginia Smith"
@@ -232,3 +235,4 @@ papers:
     year: 2019
     paper_pdf: "https://arxiv.org/abs/1902.11175"
     cs: y
+    award: "Oral Presentation"
