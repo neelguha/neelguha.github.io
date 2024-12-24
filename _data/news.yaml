@@ -1,4 +1,8 @@
 news:
+    - time: "December 2024"
+      events: "<a href='https://www.gwlr.org/vol-92-no-6/'>AI Regulation Has Its Own Alignment Problem</a> officially out in the George Washington Law Review!"
+      category: "current"
+
     - time: "November 2024"
       events: "Diego Zambrano and I have a <a href='https://wlr.law.wisc.edu/wp-content/uploads/sites/1263/2024/11/8-Guha-Zambrano-Camera-Ready.pdf'>short piece</a> out in the Wisconsin Law Review talking about a new empirical project that uses LLMs to build an annotated database of state statutes!"
       category: "current"
