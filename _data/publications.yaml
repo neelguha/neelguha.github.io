@@ -1,19 +1,19 @@
 papers:
 
-  - title: "AI Regulation Has Its Own Alignment Problem: The Technical and Institutional Feasibility of Disclosure, Registration, Licensing, and Auditing"
-    authors: "<u>Neel Guha</u>*, Christie M. Lawrence*, Lindsey A. Gailmard, Kit T. Rodolfa, Faiz Surani, Rishi Bommasani, Inioluwa Deborah Raji, Mariano-Florentino Cuéllar, Colleen Honigsberg, Percy Liang, Daniel E. Ho"
-    venue: "George Washington Law Review"
-    year: "2025"
-    paper_pdf: "https://www.gwlr.org/wp-content/uploads/2024/12/92-Geo.-Wash.-L.-Rev.-1473.pdf"
-    policy_brief: "https://hai.stanford.edu/policy-brief-ai-regulatory-alignment-problem"
-    law: y
-    selected: y
-
   - title: "A Reasoning-Focused Legal Retrieval Benchmark"
     authors: "Lucia Zheng, <u>Neel Guha</u>, Javokhir Arifov, Sarah R. Zhang, Michal Zhang, Michal Skreta, Christopher D. Manning, Peter Henderson, Daniel E. Ho"
     venue: "4th ACM Symposium on Computer Science and Law"
     year: "forthcoming 2025"
     cs: y
+    selected: y
+
+  - title: "AI Regulation Has Its Own Alignment Problem: The Technical and Institutional Feasibility of Disclosure, Registration, Licensing, and Auditing"
+    authors: "<u>Neel Guha</u>*, Christie M. Lawrence*, Lindsey A. Gailmard, Kit T. Rodolfa, Faiz Surani, Rishi Bommasani, Inioluwa Deborah Raji, Mariano-Florentino Cuéllar, Colleen Honigsberg, Percy Liang, Daniel E. Ho"
+    venue: "George Washington Law Review"
+    year: "2024"
+    paper_pdf: "https://www.gwlr.org/wp-content/uploads/2024/12/92-Geo.-Wash.-L.-Rev.-1473.pdf"
+    policy_brief: "https://hai.stanford.edu/policy-brief-ai-regulatory-alignment-problem"
+    law: y
     selected: y
 
   - title: "Understanding Liability Risk from Using Health Care Artificial Intelligence Tools"
