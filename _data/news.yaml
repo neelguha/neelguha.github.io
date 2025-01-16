@@ -1,6 +1,10 @@
 news:
+    - time: "January 2025"
+      events: "Spoke on a panel at the <a href='https://na.eventscloud.com/website/79050/'>Access to Justice and AI: New Frontiers for Research, Policy, and Practice</a> (with David Engstrom, Gillian Hadfield, Natalie Knowlton, and Zach Zarnow) about evaluation in the A2J context."
+      category: "current"
+
     - time: "December 2024"
-      events: "<a href='https://www.gwlr.org/vol-92-no-6/'>AI Regulation Has Its Own Alignment Problem</a> officially out in the George Washington Law Review!"
+      events: "<a href='https://www.gwlr.org/vol-92-no-6/'>AI Regulation Has Its Own Alignment Problem</a> officially out in the George Washington Law Review."
       category: "current"
 
     - time: "November 2024"
@@ -8,15 +12,15 @@ news:
       category: "current"
 
     - time: "October 2024"
-      events: "Michelle Mello and I appeared on the <a href='https://law.stanford.edu/stanford-legal-podcast/exploring-ai-in-healthcare-legal-regulatory-and-safety-challenges/'>Stanford Legal Podcast</a> (hosted by Professor Pam Karlan and Professor Rich Ford) to talk about our work on AI liability in healthcare!"
+      events: "Michelle Mello and I appeared on the <a href='https://law.stanford.edu/stanford-legal-podcast/exploring-ai-in-healthcare-legal-regulatory-and-safety-challenges/'>Stanford Legal Podcast</a> (hosted by Professor Pam Karlan and Professor Rich Ford) to talk about our work on AI liability in healthcare."
       category: "current"
 
     - time: "September 2024"
-      events: "Our work on <a href='https://arxiv.org/abs/2412.04692'>learning unsupervised routers</a> for LLMs accepted to NeurIPS 2024!"
+      events: "Work on <a href='https://arxiv.org/abs/2412.04692'>learning unsupervised routers</a> for LLMs accepted to NeurIPS 2024."
       category: "current"
 
     - time: "July 2024"
-      events: "Excited to contribute to <a href='https://arxiv.org/abs/2407.14981'>Open Problems in Technical AI Governance</a>!"
+      events: "<a href='https://arxiv.org/abs/2407.14981'>Open Problems in Technical AI Governance</a> out on ArXiv."
       category: "current"
 
     - time: "May 2024"

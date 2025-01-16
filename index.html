@@ -54,12 +54,30 @@ My research lies at the intersection of artificial intelligence/machine learning
 </div>
 
 <div class="docs-section" id="news">
-<h4>Recent News</h4>
-{% assign current_talks = site.data.news.news | where: "category", "current" %}
-{% for talk in current_talks %}
-  <b>{{ talk.time }}</b>: {{ talk.events }}</a> </br>
-{% endfor %}
-</div>
+  <style>
+    .news-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+    }
+    .news-time {
+      white-space: wrap;
+    }
+    .news-event {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+    }
+  </style>
+  
+  <h4>Recent News</h4>
+  <div class="news-grid">
+    {% assign current_talks = site.data.news.news | where: "category", "current" %}
+    {% for talk in current_talks %}
+      <b class="news-time">{{ talk.time }}</b>
+      <span class="news-event">{{ talk.events }}</span>
+    {% endfor %}
+  </div>
   
 <div class="docs-section" id="ack">
 <p>
