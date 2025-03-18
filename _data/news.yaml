@@ -1,4 +1,9 @@
 news:
+
+    - time: "March 2025"
+      events: "We've built two new benchmarks for evaluating legal RAG systems--on both housing law and bar exam-esque questions! It's forthcoming at <a href='https://computersciencelaw.org/2025/'>CS&Law 2025</a>, and you can check out the work <a href='https://reglab.github.io/legal-rag-benchmarks/'>here</a>."
+      category: "current"
+
     - time: "January 2025"
       events: "Spoke on a panel at the <a href='https://na.eventscloud.com/website/79050/'>Access to Justice and AI: New Frontiers for Research, Policy, and Practice</a> (with David Engstrom, Gillian Hadfield, Natalie Knowlton, and Zach Zarnow) about evaluation in the A2J context."
       category: "current"
