@@ -75,8 +75,8 @@ papers:
 
   - title: "Open Problems in Technical AI Governance"
     authors: "Anka Reuel*, Ben Bucknall*, Stephen Casper, Tim Fist, Lisa Soder, Onni Aarne, Lewis Hammond, Lujain Ibrahim, Alan Chan, Peter Wills, Markus Anderljung, Ben Garfinkel, Lennart Heim, Andrew Trask, Gabriel Mukobi, Rylan Schaeffer, Mauricio Baker, Sara Hooker, Irene Solaiman, Alexandra Sasha Luccioni, Nitarshan Rajkumar, Nicolas Moës, Jeffrey Ladish, <u>Neel Guha</u>, Jessica Newman, Yoshua Bengio, Tobin South, Alex Pentland, Sanmi Koyejo, Mykel J. Kochenderfer, Robert Trager"
-    venue: "Preprint"
-    year: 2024
+    venue: "Transactions on Machine Learning Research"
+    year: "forthcoming 2025"
     paper_pdf: "https://arxiv.org/abs/2407.14981"
     cs: y
 
