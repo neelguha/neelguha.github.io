@@ -101,7 +101,7 @@ papers:
     authors: "<u>Neel Guha</u>, Julian Nyarko, Daniel E. Ho, Christopher Ré"
     venue: "The Oxford Handbook on the Foundations and Regulation of Generative AI"
     year: 2024
-    paper_pdf: "building_genai_benchmarks_for_law_oxford_chapter.pdf"
+    paper_pdf: "https://neelguha.github.io/assets/pdf/building_genai_benchmarks_for_law_oxford_chapter.pdf"
     law: y
   
   - title: "ChatGPT and Physicians' Malpractice Risk"
