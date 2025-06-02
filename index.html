@@ -115,7 +115,7 @@
     I am a fifth year JD-PhD student in Computer Science at Stanford University (advised by <a href="https://cs.stanford.edu/~chrismre/">Chris Ré</a>). I'm a part of the <a href="https://hazyresearch.stanford.edu/">Hazy Research Lab</a>, <a href="https://crfm.stanford.edu/">Stanford Center for Research on Foundation Models</a>, and <a href="https://reglab.stanford.edu/">RegLab</a>. I graduated with a MS in Machine Learning from Carnegie Mellon University ('19) and a BS (with Honors) in Computer Science from Stanford University ('18). I am grateful to be supported by the <a href="https://vpge.stanford.edu/fellowships-funding/sigf">Stanford Interdisciplinary Graduate Fellowship (SIGF)</a> and the <a href= "https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows">HAI Graduate Fellowship</a>. 
 </p>
 <p>
-My research lies at the intersection of artificial intelligence/machine learning (AI/ML) and law. My work explores four questions:
+My research lies at the intersection of artificial intelligence/machine learning (AI/ML) and law. Most of my work can be organized into four buckets:
 </p>
 <style>
   .custom-list {
@@ -135,28 +135,25 @@ My research lies at the intersection of artificial intelligence/machine learning
 
 <ul class="custom-list">
   <li>
-    <b>How can ML advance our understanding of the law and legal institutions?</b> ML provides a novel way to generate empirical insights into legal questions using large-scale datasets. In my work, I've developed methods to classify state statutes creating private rights of action, and used these methods to <a href="https://scholarship.law.upenn.edu/penn_law_review/vol172/iss1/2/">test theories of private enforcement</a> at the state level. In <a href="https://wlr.law.wisc.edu/wp-content/uploads/sites/1263/2024/11/8-Guha-Zambrano-Camera-Ready.pdf">ongoing work</a>, I am extending these methods to identity other types of state statutes. I'm broadly interested in how LLMs can make legal data more accessible and useful for a wider audience. 
+    <b>Using machine learning to study the law and legal institutions.</b> ML provides a useful set of techniques to perform large scale analysis of different legal corpora---cases, statutes, regulations, and more. I apply these techniques in the context of different substantive legal questions (often with a focus on civil procedure). For instance, my prior work has tested theories of private enforcement  at the state level, by building a database of state private rights of action <a href="https://scholarship.law.upenn.edu/penn_law_review/vol172/iss1/2/">(U. Pa. L. Rev. 2024)</a>. In <a href="https://wlr.law.wisc.edu/wp-content/uploads/sites/1263/2024/11/8-Guha-Zambrano-Camera-Ready.pdf">ongoing work</a>, I am extending these techniques to build an open and accessible database of state laws, annotated with a broad spectrum of relevant features. 
   </li>
   <li>
-      <b>How should we govern AI?</b>
-      I examine how AI systems, particularly in sensitive domains like healthcare, can be effectively regulated. My recent work has examined trends in how courts have approached
-      <a href="https://www.nejm.org/doi/full/10.1056/NEJMhle2308901?query=featured_home">liability for medical AI</a>, and the 
-      <a href="https://dho.stanford.edu/wp-content/uploads/AI_Regulation.pdf">technical and institutional trade-offs</a> of commonly proposed regulatory interventions, such as disclosure and licensing.
+      <b>Studying questions around AI governance.</b> I'm interested in how technical nuances of AI affect governance. 
+      My recent work has examined trends in how courts have approached liability for medical AI <a href="https://www.nejm.org/doi/full/10.1056/NEJMhle2308901?query=featured_home">(NEJM 2024)</a>, and the technical and institutional trade-offs of commonly proposed regulatory interventions
+      <a href="https://dho.stanford.edu/wp-content/uploads/AI_Regulation.pdf">(GW L. Rev. 2024)</a>. In an ongoing project, I am examining how informational and structural properties of AI applications influence regulatory design across different application/use-contexts.
   </li>
   <li>
-      <b>What types of legal reasoning can large language models (LLMs) perform?</b> The answer to this question has implications for how lawyers and other legal institutions (e.g., agencies, courts) think about AI adoption.
-      I’ve contributed to the development of benchmarks that evaluate LLM performance on diverse legal reasoning and data tasks. These include 
-      <a href="https://hazyresearch.stanford.edu/legalbench/">LegalBench</a>, 
-      <a href="http://arxiv.org/abs/2104.08671">CaseHOLD</a>, 
-      <a href="https://reglab.github.io/legal-rag-benchmarks/">RAG benchmarks</a>, and 
-      <a href="https://arxiv.org/abs/2402.07440">LoCo</a>.
+      <b>Measuring the legal usefulness/capabilities of large language models (LLMs).</b> I work on building benchmarks to assess how well LLMs can perform different legal tasks. Measurement on legal tasks serves as a useful proxy for assessing reasoning capabilities generally, and also clarifies opportunities for real-world use. Examples of this work include 
+      <a href="https://hazyresearch.stanford.edu/legalbench/">LegalBench</a> (NeurIPS 2023), 
+      <a href="http://arxiv.org/abs/2104.08671">CaseHOLD</a> (ICAIL 2021), 
+      <a href="https://reglab.github.io/legal-rag-benchmarks/">RAG benchmarks</a> (CS&Law 2025), and 
+      <a href="https://arxiv.org/abs/2402.07440">LoCo</a> (ICML 2024).
   </li>
   <li>
-      <b>How can LLM performance be improved without labeled data or human supervision?</b> 
-      I investigate techniques that leverage auxiliary information (e.g., embeddings) to enhance model performance in unsupervised or weakly supervised settings. This is particulary relevant for legal applications, where access to labeled data is challenging. Examples of this work include 
-      <a href="https://arxiv.org/abs/2412.04692">Smoothie</a>, 
-      <a href="http://arxiv.org/abs/2307.11031">Embroid</a>, and 
-      <a href="https://www.cidrdb.org/cidr2021/papers/cidr2021_paper13.pdf">Bootleg</a>.
+      <b>Improving LLM performance when labeled data is scarce.</b> Producing labeled data for tasks is often expensive or impractical. I've studied how information contained within other prexisting sources may be extracted and leveraged to improve model performance for specific tasks. Examples of auxiliary sources of information include pretrained embedding models (e.g., BERT), and knowledge bases (e.g., Freebase, Wikipedia). Examples of this work include 
+      <a href="https://arxiv.org/abs/2412.04692">Smoothie</a> (NeurIPS 2024), 
+      <a href="http://arxiv.org/abs/2307.11031">Embroid</a> (NeurIPS 2023), and 
+      <a href="https://www.cidrdb.org/cidr2021/papers/cidr2021_paper13.pdf">Bootleg</a> (CIDR 2021).
   </li>
 </ul>
 </p>
