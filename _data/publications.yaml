@@ -1,5 +1,16 @@
 papers:
 
+  - title: "Cartridges: Lightweight and general-purpose long context representations via self-study"
+    authors: "Sabri Eyuboglu*, Ryan Ehrlich*, Simran Arora*, <u>Neel Guha</u>, Dylan Zinsley, Emily Liu, Will Tennien, Atri Rudra, James Zou, Azalia Mirhoseini, Christopher Re"
+    venue: "Preprint"
+    year: "2025"
+    cs: y
+    selected: n
+    blog: "https://hazyresearch.stanford.edu/blog/2025-06-08-cartridges"
+    paper_pdf: "https://arxiv.org/abs/2506.06266"
+    code: "https://github.com/HazyResearch/cartridges"
+  
+  
   - title: "A Reasoning-Focused Legal Retrieval Benchmark"
     authors: "Lucia Zheng*, <u>Neel Guha</u>*, Javokhir Arifov, Sarah R. Zhang, Michal Zhang, Michal Skreta, Christopher D. Manning, Peter Henderson, Daniel E. Ho"
     venue: "4th ACM Symposium on Computer Science and Law"
@@ -67,8 +78,8 @@ papers:
 
   - title: "Archon: An Architecture Search Framework for Inference-Time Techniques"
     authors: "Jon Saad-Falcon, Adrian Gamarra Lafuente, Shlok Natarajan, Nahum Maru, Hristo Todorov, Etash Guha, E. Kelly Buchanan, Mayee Chen, <u>Neel Guha</u>, Christopher Ré, Azalia Mirhoseini"
-    venue: "Preprint"
-    year: 2024
+    venue: "International Conference on Machine Learning"
+    year: 2025
     paper_pdf: "https://arxiv.org/abs/2409.15254"
     code: "https://github.com/ScalingIntelligence/Archon"
     cs: y

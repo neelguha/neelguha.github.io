@@ -1,5 +1,9 @@
 news:
 
+    - time: "June 2025"
+      events: "We've released <a href='https://hazyresearch.stanford.edu/blog/2025-06-08-cartridges'>Cartridges</a>, a new self-study framework for building long context representations for LLMs. Check out the <a href='https://github.com/HazyResearch/cartridges'>code</a> and <a href='https://arxiv.org/abs/2506.06266'>paper</a>!"
+      category: "current"
+
     - time: "March 2025"
       events: "We've built two new benchmarks for evaluating legal RAG systems--on both housing law and bar exam-esque questions! It's forthcoming at <a href='https://computersciencelaw.org/2025/'>CS&Law 2025</a>, and you can check out the work <a href='https://reglab.github.io/legal-rag-benchmarks/'>here</a>."
       category: "current"
