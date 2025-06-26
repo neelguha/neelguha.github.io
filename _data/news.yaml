@@ -1,6 +1,10 @@
 news:
 
     - time: "June 2025"
+      events: "Our <a href='https://academic.oup.com/edited-volume/59908/chapter-abstract/523978823?redirectedFrom=fulltext'>chapter</a> on legal benchmarking in the Oxford Handbook on the Foundations and Regulation of Generative AI is out!"
+      category: "current"
+
+    - time: "June 2025"
       events: "We've released <a href='https://hazyresearch.stanford.edu/blog/2025-06-08-cartridges'>Cartridges</a>, a new self-study framework for building long context representations for LLMs. Check out the <a href='https://github.com/HazyResearch/cartridges'>code</a> and <a href='https://arxiv.org/abs/2506.06266'>paper</a>!"
       category: "current"
 

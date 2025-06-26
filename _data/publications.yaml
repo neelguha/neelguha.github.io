@@ -1,7 +1,7 @@
 papers:
 
   - title: "Cartridges: Lightweight and general-purpose long context representations via self-study"
-    authors: "Sabri Eyuboglu*, Ryan Ehrlich*, Simran Arora*, <u>Neel Guha</u>, Dylan Zinsley, Emily Liu, Will Tennien, Atri Rudra, James Zou, Azalia Mirhoseini, Christopher Re"
+    authors: "Sabri Eyuboglu*, Ryan Ehrlich*, Simran Arora*, <u>Neel Guha</u>, Dylan Zinsley, Emily Liu, Will Tennien, Atri Rudra, James Zou, Azalia Mirhoseini, Christopher Ré"
     venue: "Preprint"
     year: "2025"
     cs: y
@@ -111,8 +111,8 @@ papers:
   - title: "Building GenAI Benchmarks: A Case Study in Legal Applications"
     authors: "<u>Neel Guha</u>, Julian Nyarko, Daniel E. Ho, Christopher Ré"
     venue: "The Oxford Handbook on the Foundations and Regulation of Generative AI"
-    year: 2024
-    paper_pdf: "https://neelguha.github.io/assets/pdf/building_genai_benchmarks_for_law_oxford_chapter.pdf"
+    year: 2025
+    paper_pdf: "https://academic.oup.com/edited-volume/59908/chapter-abstract/523978823?redirectedFrom=fulltext"
     law: y
   
   - title: "ChatGPT and Physicians' Malpractice Risk"
