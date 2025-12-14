@@ -240,7 +240,7 @@ papers:
     year: 2019
     paper_pdf: "https://arxiv.org/abs/1910.08842"
     cs: y
-    award: "Honorable Mention for Best Paper"
+    award: "Best Paper (Honorable Mention)"
 
   - title: "One-Shot Federated Learning"
     authors: "<u>Neel Guha</u>, Ameet Talwalkar, Virginia Smith"

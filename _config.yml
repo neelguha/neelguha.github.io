@@ -5,3 +5,8 @@ includes:    ./_includes
 collections:
   projects:
     output: true
+
+# Blog settings
+timezone: America/Los_Angeles
+plugins:
+  - jekyll-feed
