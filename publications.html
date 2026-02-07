@@ -9,20 +9,20 @@ title: Publications
 {% for paper in all_papers %}
   <div class="paper-inline">
     {% if paper.paper_pdf %}
-      <a href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">{{ paper.title }}</a>
+      <strong><a href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">{{ paper.title }}</a></strong>
     {% else %}
       <strong>{{ paper.title }}</strong>
     {% endif %}<br>
     {{ paper.authors }}<br>
-    <em>{{ paper.venue }}</em> ({{ paper.year }})<br>
-    {% if paper.award %}<span style="color:#4682b4">Award: {{ paper.award }}</span><br>{% endif %}
-    {% if paper.code or paper.blog or paper.policy_brief or paper.website or paper.news %}
-      Links: 
-      {% if paper.code %}<a href="{{ paper.code }}" target="_blank">Code,</a>{% endif %}
-      {% if paper.blog %} <a href="{{ paper.blog }}" target="_blank">Blog,</a>{% endif %}
-      {% if paper.policy_brief %}<a href="{{ paper.policy_brief }}" target="_blank">Policy Brief,</a>{% endif %}
-      {% if paper.website %}<a href="{{ paper.website }}" target="_blank">Website,</a>{% endif %}
-      {% if paper.news %}<a href="{{ paper.news }}" target="_blank">News,</a>{% endif %}
+    <em>{{ paper.venue }}</em> ({{ paper.year }}){% if paper.award or paper.code or paper.blog or paper.policy_brief or paper.website or paper.news %}<br>{% endif %}
+    {% if paper.award %}Award: {{ paper.award }}<br>{% endif %}
+    {% if paper.code or paper.blog or paper.policy_brief or paper.website %}
+      Links:
+      {% if paper.code %}<a href="{{ paper.code }}" target="_blank">Code</a>{% if paper.blog or paper.policy_brief or paper.website %}, {% endif %}{% endif %}
+      {% if paper.blog %}<a href="{{ paper.blog }}" target="_blank">Blog</a>{% if paper.policy_brief or paper.website %}, {% endif %}{% endif %}
+      {% if paper.policy_brief %}<a href="{{ paper.policy_brief }}" target="_blank">Policy Brief</a>{% if paper.website %}, {% endif %}{% endif %}
+      {% if paper.website %}<a href="{{ paper.website }}" target="_blank">Website</a>{% endif %}
     {% endif %}
+    {% if paper.news %}{% if paper.code or paper.blog or paper.policy_brief or paper.website %}<br>{% endif %}{{ paper.news }}{% endif %}
   </div>
 {% endfor %}

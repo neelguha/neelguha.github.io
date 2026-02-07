@@ -1,5 +1,12 @@
 papers:
 
+  - title: "There's No Free Benchmark: An Institutional View of Legal AI Benchmarking"
+    authors: "<u>Neel Guha</u>, Andy K. Zhang, Christine Tsang, Christopher D. Manning, Julian Nyarko, Daniel E. Ho"
+    venue: "Proceedings of the National Academy of Sciences"
+    year: "forthcoming 2026"
+    law: y
+    selected: n
+
   - title: "Cartridges: Lightweight and general-purpose long context representations via self-study"
     authors: "Sabri Eyuboglu*, Ryan Ehrlich*, Simran Arora*, <u>Neel Guha</u>, Dylan Zinsley, Emily Liu, Will Tennien, Atri Rudra, James Zou, Azalia Mirhoseini, Christopher Ré"
     venue: "International Conference on Learning Representations"
@@ -222,6 +229,7 @@ papers:
     year: 2021
     paper_pdf: "https://arxiv.org/abs/2011.07194"
     cs: y
+    code: "https://github.com/mandycoston/covid-mobility-disparate-coverage"
     news: "Featured in <a href='https://www.wsj.com/articles/smartphone-location-data-can-leave-out-those-most-hit-by-covid-19-11617627615'>Wall Street Journal</a>."
 
   - title: "Bootleg: Chasing the Tail with Self-Supervised Named Entity Disambiguation"
