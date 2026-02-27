@@ -1,12 +1,99 @@
-source:      .
-destination: ./_site
-includes:    ./_includes
+# Site settings
+title: blank
+first_name: Neel
+last_name: Guha
+description: >
+  PhD student in Computer Science at Stanford University.
+keywords: neel guha, stanford, computer science, law, AI, machine learning
+lang: en
 
-collections:
-  projects:
-    output: true
+url: https://neelguha.github.io
+baseurl:
 
-# Blog settings
-timezone: America/Los_Angeles
+# Blog
+permalink: /blog/:year/:title/
+
+# Jekyll settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+include: ["_pages"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - vendor
+
 plugins:
   - jekyll-feed
+  - jekyll-scholar
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+
+# Jekyll Scholar
+scholar:
+  last_name: [Guha]
+  first_name: [Neel]
+
+  style: apa
+  locale: en
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_link: Details
+
+  query: "@*"
+  group_by: year
+  group_order: descending
+
+filtered_bibtex_keywords:
+  [
+    abbr,
+    abstract,
+    additional_info,
+    annotation,
+    arxiv,
+    award,
+    bibtex_show,
+    blog,
+    code,
+    eprint,
+    html,
+    pdf,
+    poster,
+    preview,
+    selected,
+    slides,
+    supp,
+    video,
+    website,
+  ]
+
+max_author_limit: 6
+more_authors_animation_delay: 10
+enable_publication_thumbnails: false

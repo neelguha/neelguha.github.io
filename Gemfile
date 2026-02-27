@@ -1,5 +1,14 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll"
-gem "github-pages"
-gem "webrick"
+gem 'jekyll'
+
+group :jekyll_plugins do
+    gem 'jekyll-feed'
+    gem 'jekyll-scholar'
+    gem 'jekyll-sitemap'
+end
+
+group :other_plugins do
+    gem 'observer'
+    gem 'ostruct'
+end

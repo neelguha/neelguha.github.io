@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="profile-sidebar">
+  {% if page.profile.image %}
+    <img src="{{ '/assets/img/' | append: page.profile.image | relative_url }}" alt="Profile photo">
+  {% endif %}
+  <div class="contact-info">
+    {% if site.data.socials.email %}
+      <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+    {% endif %}
+    {% if site.data.socials.scholar_userid %}
+      <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar</a>
+    {% endif %}
+    {% if site.data.socials.github_username %}
+      <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub</a>
+    {% endif %}
+    {% if site.data.socials.x_username %}
+      <a href="https://twitter.com/{{ site.data.socials.x_username }}">Twitter/X</a>
+    {% endif %}
+    {% if site.data.socials.linkedin_username %}
+      <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}">LinkedIn</a>
+    {% endif %}
+  </div>
+</div>
+
+{{ content }}

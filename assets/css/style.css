@@ -1,0 +1,383 @@
+/* ==========================================================================
+   Carlini-inspired clean academic site
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FEFEFE;
+  font-family: "Lora", "Georgia", serif;
+  text-rendering: optimizeLegibility;
+  line-height: 140%;
+  margin: 0;
+  color: #222;
+}
+
+/* ---------- Top navigation bar ---------- */
+
+.topbar {
+  width: 100%;
+  padding: 1em 0;
+  background: #FFF;
+  border-bottom: 1px solid #D0D0D0;
+  box-shadow: 0 0 12px rgba(0,0,0,.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar-inner {
+  max-width: 58em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 150%;
+  font-variant: small-caps;
+  letter-spacing: .12em;
+}
+
+.site-title a {
+  color: #222;
+}
+
+.site-title a:hover {
+  color: #A02020;
+}
+
+nav.site-nav a {
+  font-size: 110%;
+  margin-left: 1.5em;
+}
+
+/* ---------- Links ---------- */
+
+a {
+  text-decoration: none;
+  color: #A02020;
+}
+
+a:hover {
+  color: #C03030;
+}
+
+/* Underline on links in main content */
+.content a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.3s ease;
+}
+
+.content a:hover {
+  text-decoration-color: #c44;
+}
+
+/* ---------- Main layout ---------- */
+
+.container {
+  max-width: 58em;
+  margin: 0 auto;
+  padding: 1.5em 1.5em 3em;
+}
+
+.page-header {
+  border-bottom: #DDD solid 2px;
+  padding-bottom: .4em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  line-height: 120%;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 1.2em;
+  margin-bottom: .4em;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+li {
+  padding-bottom: .3em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,.15);
+  margin: 1.5em 0;
+}
+
+/* ---------- About page: profile sidebar ---------- */
+
+.profile-sidebar {
+  width: 16em;
+  float: right;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.profile-sidebar img {
+  width: 100%;
+  border-radius: 4%;
+  box-shadow: 0 0 6px rgba(0,0,0,.1);
+}
+
+.profile-sidebar .contact-info {
+  background: #F8F8F8;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border-bottom: 1px solid #D0D0D0;
+  border-right: 1px solid #D0D0D0;
+  box-shadow: 0 0 6px rgba(0,0,0,.1);
+  margin-top: .8em;
+  font-size: .9em;
+  line-height: 180%;
+}
+
+.profile-sidebar .contact-info a {
+  display: block;
+}
+
+/* ---------- Publications ---------- */
+
+.publications .year-group {
+  margin-bottom: .5em;
+}
+
+.publications .year-heading {
+  font-size: 1.4em;
+  font-weight: normal;
+  border-bottom: 1px solid #DDD;
+  padding-bottom: .3em;
+  margin-bottom: .8em;
+}
+
+.pub-entry {
+  margin-bottom: .6em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #eee;
+  line-height: 140%;
+}
+
+.pub-entry:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+.pub-title a {
+  color: #A02020;
+}
+
+.pub-authors {
+  margin: .1em 0;
+  font-size: .9em;
+}
+
+.pub-authors em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.pub-venue {
+  font-style: italic;
+  font-size: .9em;
+  color: #444;
+}
+
+.pub-award {
+  background: #ffb;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 1px 5px;
+  font-size: .85em;
+}
+
+.pub-links {
+  margin-top: .15em;
+  font-size: .85em;
+}
+
+.pub-links a {
+  margin-right: .8em;
+  color: #A02020;
+}
+
+/* Abstract toggle */
+.pub-abstract-toggle {
+  cursor: pointer;
+  color: #A02020;
+  font-size: .9em;
+}
+
+.pub-abstract-toggle:hover {
+  color: #C03030;
+}
+
+.pub-abstract {
+  margin-top: .5em;
+  padding: .8em 1em;
+  background: #F8F8F8;
+  border-radius: 4px;
+  font-size: .9em;
+  line-height: 160%;
+  display: none;
+}
+
+/* Abbr badge (venue tag) */
+.pub-abbr {
+  display: inline-block;
+  background: #e8e8e8;
+  color: #444;
+  font-size: .75em;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: .5em;
+  vertical-align: middle;
+  font-variant: small-caps;
+  letter-spacing: .05em;
+}
+
+/* ---------- Blog ---------- */
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  padding-bottom: .6em;
+  border-bottom: 1px solid #eee;
+  margin-bottom: .6em;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list .post-title {
+  font-size: 1.15em;
+}
+
+.post-list .post-title a {
+  color: #222;
+}
+
+.post-list .post-title a:hover {
+  color: #A02020;
+}
+
+.post-list .post-meta {
+  font-size: .85em;
+  color: #888;
+  margin-top: .1em;
+}
+
+.post-list .post-desc {
+  font-size: .95em;
+  color: #555;
+  margin-top: .3em;
+}
+
+/* Single blog post */
+.post-content {
+  font-size: 14pt;
+  line-height: 160%;
+}
+
+.post-content h2 {
+  margin-top: 2em;
+}
+
+.post-header-meta {
+  color: #888;
+  font-size: .9em;
+  margin-bottom: 1.5em;
+}
+
+/* ---------- Highlight box (job market) ---------- */
+
+.highlight-box {
+  background-color: #fff8e1;
+  border-left: 4px solid #f0c000;
+  padding: 12px 16px;
+  margin-bottom: 1.5em;
+  border-radius: 2px;
+  font-size: .95em;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 2em 0 1em;
+  font-size: .7em;
+  color: #999;
+}
+
+.site-footer a {
+  color: #999;
+}
+
+.site-footer a:hover {
+  color: #A02020;
+}
+
+/* ---------- Selected papers section on about ---------- */
+
+.selected-papers .pub-entry {
+  margin-bottom: 1em;
+  padding-bottom: .8em;
+}
+
+/* ---------- Responsive ---------- */
+
+@media all and (max-width: 42em) {
+  .topbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5em;
+  }
+
+  nav.site-nav a {
+    margin-left: 0;
+    margin-right: 1.2em;
+    font-size: 1em;
+  }
+
+  .profile-sidebar {
+    float: none;
+    width: 10em;
+    margin: 0 auto 1.5em;
+  }
+
+  .container {
+    padding: 1em;
+  }
+
+  .page-header {
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,98 @@
+---
+---
+<div class="pub-entry" id="{{ entry.key }}">
+  <!-- Title -->
+  <div class="pub-title">
+    {% if entry.arxiv %}
+      <a href="http://arxiv.org/abs/{{ entry.arxiv }}">{{ entry.title }}</a>
+    {% elsif entry.pdf %}
+      {% if entry.pdf contains '://' %}
+        <a href="{{ entry.pdf }}">{{ entry.title }}</a>
+      {% else %}
+        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">{{ entry.title }}</a>
+      {% endif %}
+    {% elsif entry.html %}
+      <a href="{{ entry.html }}">{{ entry.title }}</a>
+    {% elsif entry.doi %}
+      <a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
+    {% else %}
+      {{ entry.title }}
+    {% endif %}
+  </div>
+
+  <!-- Authors -->
+  <div class="pub-authors">
+    {%- for author in entry.author_array -%}
+      {%- assign author_is_self = false -%}
+      {%- assign author_last_name = author.last | remove: '*' | remove: '†' -%}
+      {%- if site.scholar.last_name contains author_last_name -%}
+        {%- if site.scholar.first_name contains author.first -%}
+          {%- assign author_is_self = true -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if forloop.length > 1 -%}
+        {%- if forloop.first == false -%}
+          {%- if forloop.length > 2 -%}, {% elsif forloop.length == 2 %} {% endif -%}
+        {%- endif -%}
+        {%- if forloop.last and forloop.length > 1 -%}and {% endif -%}
+      {%- endif -%}
+      {%- if author_is_self -%}
+        <em>{{ author.first }} {{ author.last }}</em>
+      {%- else -%}
+        {{ author.first }} {{ author.last }}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <!-- Venue -->
+  {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+  {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+  {% if entry.type == 'article' %}
+    {% assign venue_name = entry.journal %}
+  {% elsif proceedings contains entry.type %}
+    {% assign venue_name = entry.booktitle %}
+  {% elsif entry.type == 'inbook' %}
+    {% assign venue_name = entry.title %}
+  {% elsif thesis contains entry.type %}
+    {% assign venue_name = entry.school %}
+  {% else %}
+    {% assign venue_name = '' %}
+  {% endif %}
+
+  {% if venue_name != '' %}
+    <div class="pub-venue">
+      {{ venue_name }}
+    </div>
+  {% endif %}
+
+  <!-- Award -->
+  {% if entry.award %}
+    <div style="margin-top:.2em;"><span class="pub-award">{{ entry.award }}</span></div>
+  {% endif %}
+
+  <!-- Links -->
+  <div class="pub-links">
+    {% if entry.arxiv %}
+      <a href="http://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a>
+    {% endif %}
+    {% if entry.pdf %}
+      {% if entry.pdf contains '://' %}
+        <a href="{{ entry.pdf }}">PDF</a>
+      {% else %}
+        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">PDF</a>
+      {% endif %}
+    {% endif %}
+    {% if entry.code %}
+      <a href="{{ entry.code }}">Code</a>
+    {% endif %}
+    {% if entry.blog %}
+      <a href="{{ entry.blog }}">Blog</a>
+    {% endif %}
+    {% if entry.website %}
+      <a href="{{ entry.website }}">Website</a>
+    {% endif %}
+    {% if entry.doi %}
+      <a href="https://doi.org/{{ entry.doi }}">DOI</a>
+    {% endif %}
+  </div>
+</div>
