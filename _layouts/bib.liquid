@@ -3,20 +3,25 @@
 <div class="pub-entry" id="{{ entry.key }}">
   <!-- Title -->
   <div class="pub-title">
+    {% if entry.type == 'inbook' %}
+      {% assign display_title = entry.chapter %}
+    {% else %}
+      {% assign display_title = entry.title %}
+    {% endif %}
     {% if entry.arxiv %}
-      <a href="http://arxiv.org/abs/{{ entry.arxiv }}">{{ entry.title }}</a>
+      <a href="http://arxiv.org/abs/{{ entry.arxiv }}">{{ display_title }}</a>
     {% elsif entry.pdf %}
       {% if entry.pdf contains '://' %}
-        <a href="{{ entry.pdf }}">{{ entry.title }}</a>
+        <a href="{{ entry.pdf }}">{{ display_title }}</a>
       {% else %}
-        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">{{ entry.title }}</a>
+        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">{{ display_title }}</a>
       {% endif %}
     {% elsif entry.html %}
-      <a href="{{ entry.html }}">{{ entry.title }}</a>
+      <a href="{{ entry.html }}">{{ display_title }}</a>
     {% elsif entry.doi %}
-      <a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
+      <a href="https://doi.org/{{ entry.doi }}">{{ display_title }}</a>
     {% else %}
-      {{ entry.title }}
+      {{ display_title }}
     {% endif %}
   </div>
 
@@ -61,7 +66,7 @@
 
   {% if venue_name != '' %}
     <div class="pub-venue">
-      {{ venue_name }}
+      {% if entry.type == 'inbook' %}in {% endif %}{{ venue_name }}{% if entry.type == 'inbook' and entry.editor %}, edited by {{ entry.editor }}{% endif %}
     </div>
   {% endif %}
 
