@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://neelguha.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://neelguha.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-24T20:19:26+00:00</updated><id>https://neelguha.github.io/feed.xml</id><title type="html">blank</title><subtitle>PhD student in Computer Science at Stanford University.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://neelguha.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://neelguha.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-24T21:26:49+00:00</updated><id>https://neelguha.github.io/feed.xml</id><title type="html">blank</title><subtitle>PhD student in Computer Science at Stanford University.
 </subtitle><entry><title type="html">Templates for Machine Learning Research Papers</title><link href="https://neelguha.github.io/blog/2026/templates/" rel="alternate" type="text/html" title="Templates for Machine Learning Research Papers" /><published>2026-03-24T00:00:00+00:00</published><updated>2026-03-24T00:00:00+00:00</updated><id>https://neelguha.github.io/blog/2026/templates</id><content type="html" xml:base="https://neelguha.github.io/blog/2026/templates/"><![CDATA[<p>This blogpost is intended to help students understand how to present research to machine learning audiences.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> It is an amalgamation of lessons that my friends and I have learned through our PhDs, and is drawn from our experiences writing, reading, and reviewing machine learning papers.</p>
 
 <p>This post’s core idea is that machine learning research papers follow <strong>templates</strong>. What is a template? A template is a particular format for presenting an argument. Modern machine learning is characterized by a recurring set of templates. When you sit down to translate your research into a paper, you must determine which of these templates to use and follow the template closely. If you stray from the template’s form and break its rules—by making some but not all of the arguments—reviewers and readers will notice. Even if they can’t identify the specific transgression, the pervasiveness of templates in published machine learning research means they will instinctively recognize that something is <em>off</em>. Your name will be cursed; your lab slandered on X; your GPUs exiled to sit idle on some far off lunar cluster.</p>
@@ -7,7 +7,18 @@
 
 <p>What follows is my best effort to collect and describe different templates. As you might expect, the templates articulated below reflect my own research biases: the papers I’ve written, the areas I work in, and the wonderful folks I collaborate with. To the extent that you think the following list misconstrues a template or overlooks important ones, then I welcome your feedback, and I will try my best to edit this blogpost to reflect inbound comments.</p>
 
-<h2 id="template-1-the-data-artifact-paper">Template 1: The “Data Artifact” Paper</h2>
+<ul>
+  <li><a href="#the-data-artifact-paper">The “Data Artifact Paper”</a></li>
+  <li><a href="#the-horse-race-paper">The “Horse Race Paper”</a></li>
+  <li><a href="#the-new-paradigm-paper">The “New Paradigm Paper”</a></li>
+  <li><a href="#the-resurrected-baseline-paper">The “Resurrected Baseline Paper”</a></li>
+  <li><a href="#the-unification-paper">The “Unification Paper”</a></li>
+  <li><a href="#the-problem-solving-paper">The “Problem Solving Paper”</a></li>
+  <li><a href="#the-discovery-paper">The “Discovery Paper”</a></li>
+  <li><a href="#the-countervailing-wisdom-paper">The “Countervailing Wisdom Paper”</a></li>
+</ul>
+
+<h2 id="the-data-artifact-paper">The “Data Artifact Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
@@ -31,7 +42,7 @@
 
 <p>Third, you must convince the reader that your benchmark allows us to learn something new about machine learning generally. A benchmark which yields no new information about existing methods or algorithms has little marginal value. There are already many benchmarks and datasets which tell us a lot about machine learning performance. In order to be useful, yours must tell us something additional. Most papers check this box by showing that intuitively applicable methods which perform well in other contexts actually struggle on the introduced benchmark. Thus, the benchmarks in these papers are saying: “I am measuring capabilities that other benchmarks do not, because the methods that work elsewhere are poor on me.” Alternative ways to check this box often involve a new set of metrics (“here’s a kind of systems efficiency we should care about!”) or even a surprising finding about which algorithms/models work well (“hey that model we were all unsure about is actually <a href="https://x.com/ValsAI/status/1945908942875611174">weirdly good at legal tasks</a>? that’s pretty strange!!”).</p>
 
-<h2 id="template-2-the-horse-race-paper">Template 2: The “Horse Race Paper”</h2>
+<h2 id="the-horse-race-paper">The “Horse Race Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
@@ -49,7 +60,7 @@
 
 <p>The Horse Race Paper trades rhetorical difficulty for technical difficulty. Rarely does one have the goods to execute this paper. At any point in time, only a handful of benchmarks actually enable this kind of argument.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
 
-<h2 id="template-3-the-new-paradigm-paper">Template 3: The “New Paradigm” Paper</h2>
+<h2 id="the-new-paradigm-paper">The “New Paradigm Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
@@ -91,7 +102,7 @@
 
 <p>The New Paradigm Paper is extremely difficult to write. At each stage, you must negotiate a different collection of treacherous pitfalls. The good news is that successful execution of the New Paradigm paper usually enables a series of follow-up papers, in which you tweak, tinker with, and improve the algorithm. At the peak of their powers, New Paradigm Papers tend to start new subfields.</p>
 
-<h2 id="template-4-the-resurrected-baseline-paper">Template 4: The “Resurrected Baseline” Paper</h2>
+<h2 id="the-resurrected-baseline-paper">The “Resurrected Baseline Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
@@ -114,7 +125,7 @@ The LIMA authors begin by observing that LLM post-training has gotten extremely 
 
 <p>LIMA illustrates that many different things can qualify as a “baseline” in a Resurrected Baseline Paper. Maybe it’s a dataset, a training algorithm, or even a model.</p>
 
-<h2 id="template-5-the-unification-paper">Template 5: The “Unification” Paper</h2>
+<h2 id="the-unification-paper">The “Unification Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
@@ -124,7 +135,7 @@ The LIMA authors begin by observing that LLM post-training has gotten extremely 
   <li>Show that a unifying framework yields practical payoffs.</li>
 </ol>
 
-<p>The fifth template is the “Unification” paper.</p>
+<p>The fifth template is the “Unification Paper”.</p>
 
 <p>The first step in a Unification Paper is to establish there is an emerging interesting area where researchers have offered a range of seemingly different algorithms or methods. The second step is to illustrate that all of these methods are, in fact, different instantiations of a slightly more general method. The third step is to show that recognizing this lurking general method yields some kind of practical payoff. For example, maybe the general method is easier to implement, can be optimized in some way, or yields better results because it can be flexibly tailored to different contexts.</p>
 
@@ -132,7 +143,7 @@ The LIMA authors begin by observing that LLM post-training has gotten extremely 
 
 <p>When I first presented the ideas in this blogpost, the audience suggested that the Unification Paper is the theoretician’s version of the Horse Race paper. I was skeptical at first, but increasingly think that’s correct. The Unification Paper only works if the mathematical framework advanced–the unification–actually works. If there is even a single prominent algorithm which falls outside of the framework, the paper usually fails. Like the Horse Race paper, so much depends on the strength of the underlying technical results.</p>
 
-<h2 id="template-6-the-problem-solving-paper">Template 6: The “Problem Solving” Paper</h2>
+<h2 id="the-problem-solving-paper">The “Problem Solving Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
@@ -155,7 +166,7 @@ The second requirement is that you must, <em>obviously</em>, solve these problem
 
 <p>The result is M2-BERT, an 80M parameter retrieval encoder that outperforms Transformer-based models more than 90 times its size on LoCoV1. Because the authors solved each problem separately, you understand exactly why the model works.</p>
 
-<h2 id="template-7-the-discovery-paper">Template 7: The “Discovery” Paper</h2>
+<h2 id="the-discovery-paper">The “Discovery Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
@@ -177,7 +188,7 @@ The second requirement is that you must, <em>obviously</em>, solve these problem
 
 <p>Another example is <a href="https://arxiv.org/abs/1902.10811">Do ImageNet Classifiers Generalize to ImageNet?</a> Here, the authors are interested in whether models that perform well on benchmark test sets generalize. They answer this question by recreating two benchmarks with entirely different data, and comparing model performance across the original and new test sets. The biggest implication of their study is that benchmarks are effective for development–models which perform well on the original benchmarks also perform well on the new ones.</p>
 
-<h2 id="template-8-the-countervailing-wisdom-paper">Template 8: The “Countervailing Wisdom” Paper</h2>
+<h2 id="the-countervailing-wisdom-paper">The “Countervailing Wisdom Paper”</h2>
 
 <p><strong>Key pieces</strong></p>
 
