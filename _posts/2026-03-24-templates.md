@@ -15,7 +15,7 @@ For these reasons, it is important to understand the different templates. As you
 
 What follows is my best effort to collect and describe different templates. As you might expect, the templates articulated below reflect my own research biases: the papers I’ve written, the areas I work in, and the wonderful folks I collaborate with. To the extent that you think the following list misconstrues a template or overlooks important ones, then I welcome your feedback, and I will try my best to edit this blogpost to reflect inbound comments. 
 
-## Template 1: The “Data Artifact” Paper
+## Template 1: The "Data Artifact Paper"
 
 **Key pieces**
 
@@ -35,7 +35,7 @@ Second, you must convince the reader that your benchmark is fundamentally sound.
 
 Third, you must convince the reader that your benchmark allows us to learn something new about machine learning generally. A benchmark which yields no new information about existing methods or algorithms has little marginal value. There are already many benchmarks and datasets which tell us a lot about machine learning performance. In order to be useful, yours must tell us something additional. Most papers check this box by showing that intuitively applicable methods which perform well in other contexts actually struggle on the introduced benchmark. Thus, the benchmarks in these papers are saying: “I am measuring capabilities that other benchmarks do not, because the methods that work elsewhere are poor on me.” Alternative ways to check this box often involve a new set of metrics (“here’s a kind of systems efficiency we should care about\!”) or even a surprising finding about which algorithms/models work well (“hey that model we were all unsure about is actually [weirdly good at legal tasks](https://x.com/ValsAI/status/1945908942875611174)? that’s pretty strange\!\!”). 
 
-## Template 2: The “Horse Race Paper”
+## Template 2: The "Horse Race Paper"
 
 **Key pieces**
 
@@ -51,7 +51,7 @@ Some of the most influential papers of the last fifteen years are Horse Race Pap
 
 The Horse Race Paper trades rhetorical difficulty for technical difficulty. Rarely does one have the goods to execute this paper. At any point in time, only a handful of benchmarks actually enable this kind of argument.[^3] 
 
-## Template 3: The “New Paradigm” Paper 
+## Template 3: The "New Paradigm Paper" 
 
 **Key pieces**
 
@@ -86,7 +86,7 @@ Third and finally, you must show that the new paradigm allows you to do somethin
 
 The New Paradigm Paper is extremely difficult to write. At each stage, you must negotiate a different collection of treacherous pitfalls. The good news is that successful execution of the New Paradigm paper usually enables a series of follow-up papers, in which you tweak, tinker with, and improve the algorithm. At the peak of their powers, New Paradigm Papers tend to start new subfields. 
 
-## Template 4: The "Resurrected Baseline” Paper
+## Template 4: The "Resurrected Baseline Paper"
 
 **Key pieces**
 
@@ -107,7 +107,7 @@ The LIMA authors begin by observing that LLM post-training has gotten extremely 
 
 LIMA illustrates that many different things can qualify as a “baseline” in a Resurrected Baseline Paper. Maybe it’s a dataset, a training algorithm, or even a model.
 
-## Template 5: The “Unification” Paper
+## Template 5: The "Unification Paper"
 
 **Key pieces**
 
@@ -115,7 +115,7 @@ LIMA illustrates that many different things can qualify as a “baseline” in a
 2. Show that all of these methods are essentially small variations on each other  
 3. Show that a unifying framework yields practical payoffs.
 
-The fifth template is the “Unification” paper. 
+The fifth template is the "Unification Paper". 
 
 The first step in a Unification Paper is to establish there is an emerging interesting area where researchers have offered a range of seemingly different algorithms or methods. The second step is to illustrate that all of these methods are, in fact, different instantiations of a slightly more general method. The third step is to show that recognizing this lurking general method yields some kind of practical payoff. For example, maybe the general method is easier to implement, can be optimized in some way, or yields better results because it can be flexibly tailored to different contexts.
 
@@ -123,7 +123,7 @@ The first step in a Unification Paper is to establish there is an emerging inter
 
 When I first presented the ideas in this blogpost, the audience suggested that the Unification Paper is the theoretician’s version of the Horse Race paper. I was skeptical at first, but increasingly think that’s correct. The Unification Paper only works if the mathematical framework advanced–the unification–actually works. If there is even a single prominent algorithm which falls outside of the framework, the paper usually fails. Like the Horse Race paper, so much depends on the strength of the underlying technical results.
 
-## Template 6: The “Problem Solving” Paper  
+## Template 6: The "Problem Solving Paper"  
 
 **Key pieces**
 
@@ -144,7 +144,7 @@ The paper then addresses each problem in turn. For the first, they introduce LoC
 
 The result is M2-BERT, an 80M parameter retrieval encoder that outperforms Transformer-based models more than 90 times its size on LoCoV1. Because the authors solved each problem separately, you understand exactly why the model works.
 
-## Template 7: The “Discovery” Paper
+## Template 7: The "Discovery Paper"
 
 **Key pieces**
 
@@ -164,7 +164,7 @@ One example of a Discovery Paper is [Chinchilla](https://arxiv.org/abs/2203.1555
 
 Another example is [Do ImageNet Classifiers Generalize to ImageNet?](https://arxiv.org/abs/1902.10811) Here, the authors are interested in whether models that perform well on benchmark test sets generalize. They answer this question by recreating two benchmarks with entirely different data, and comparing model performance across the original and new test sets. The biggest implication of their study is that benchmarks are effective for development–models which perform well on the original benchmarks also perform well on the new ones.
 
-## Template 8: The "Countervailing Wisdom” Paper
+## Template 8: The "Countervailing Wisdom Paper"
 
 **Key pieces**
 
