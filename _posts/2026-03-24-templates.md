@@ -189,7 +189,7 @@ Countervailing Wisdom papers have a little bit of edge to them. You are essentia
 
 A great example is "[Are Emergent Abilities of Large Language Models a Mirage?](https://arxiv.org/abs/2304.15004)", which won the Outstanding Paper Award at NeurIPS in 2023\. The authors first identify the widely held view that certain LLM capabilities appear suddenly and unpredictably at scale (“emergence”). They then show that emergence is an artifact of the metric, and that toggling between non-linear and linear metrics can induce (or eliminate) emergence. They then apply this insight to LLMs, finding that claims of emergence are somewhat overstated. 
 
-[^1]:  Helpful feedback and comments on drafts of this post were provided by Dan Fu, Vivien Cheng, Mayee Chen, Hermann Kumbong, Yasa Baig, and Francois Chaubard.
+[^1]:  Helpful feedback and comments on drafts of this post were provided by Dan Fu, Vivien Cheng, Mayee Chen, Hermann Kumbong, Yasa Baig, and Francois Chaubard. The ideas discussed here reflect years of conversations with other members of the [Hazy Research](https://hazyresearch.stanford.edu/).
 
 [^2]:  You don’t often know what type of paper you’re going to write until you’re deep into the research process. The act of writing (i.e., trying to fit your research into a template) is a form of thinking in itself, which might reveal important gaps or potential opportunities. Thus, the correct time to begin writing isn’t at the end of your project, but throughout the process itself.
 
