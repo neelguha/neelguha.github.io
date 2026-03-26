@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LegalBench V2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: Georgia, serif;
-      font-size: 17px;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: 16px;
       line-height: 1.75;
       color: #111;
       background: #fff;
@@ -20,46 +24,140 @@
 
     /* Header */
     .site-header {
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
       padding-bottom: 2rem;
       border-bottom: 1px solid #ddd;
     }
 
     .site-header h1 {
-      font-size: 2rem;
-      font-weight: normal;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
     }
 
     .site-header p {
-      color: #555;
-      font-style: italic;
+      color: #666;
+      font-size: 0.95rem;
     }
 
-    /* Sections */
-    section {
-      margin-bottom: 3rem;
+    /* TLDR */
+    .tldr {
+      background: #f7f7f7;
+      border-left: 3px solid #111;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: #222;
     }
 
-    h2 {
-      font-size: 1.15rem;
-      font-weight: bold;
+    .tldr strong {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 1rem;
+      color: #888;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Accordion */
+    .accordion {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .accordion:last-of-type {
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .accordion-header h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       color: #111;
     }
 
+    .accordion-header .toggle {
+      color: #aaa;
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .accordion-body {
+      display: none;
+      padding-bottom: 1.75rem;
+    }
+
+    .accordion.open > .accordion-body {
+      display: block;
+    }
+
+    .accordion.open > .accordion-header .toggle {
+      content: '−';
+    }
+
+    /* Nested task items — simple, not accordion */
+    .task-item {
+      border-top: 1px solid #f0f0f0;
+      padding: 0.85rem 0;
+    }
+
+    .task-item:last-child {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .task-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .task-item-header .toggle {
+      color: #bbb;
+      font-size: 1.1rem;
+      font-weight: 300;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .task-item-body {
+      display: none;
+      padding-top: 0.85rem;
+      font-size: 0.93rem;
+    }
+
+    .task-item.open > .task-item-body {
+      display: block;
+    }
+
+    /* Typography */
     h3 {
-      font-size: 1rem;
-      font-weight: bold;
+      font-size: 0.92rem;
+      font-weight: 600;
       margin: 1.5rem 0 0.4rem;
     }
 
     p {
       margin-bottom: 1rem;
       color: #222;
+      font-size: 0.97rem;
     }
 
     p:last-child { margin-bottom: 0; }
@@ -67,37 +165,38 @@
     a { color: #111; }
     a:hover { color: #555; }
 
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 3rem 0;
-    }
-
-    /* Blockquote — for example prompts */
     blockquote {
-      border-left: 2px solid #bbb;
-      margin: 1rem 0;
+      border-left: 2px solid #ccc;
+      margin: 0.75rem 0;
       padding: 0.6rem 1.25rem;
       color: #444;
       font-style: italic;
+      font-size: 0.93rem;
     }
 
-    /* Small label */
     .label {
-      font-family: -apple-system, Helvetica, Arial, sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
+      font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #888;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
     }
+
+    ul {
+      margin: 0.75rem 0 1rem 1.5rem;
+      color: #222;
+      font-size: 0.97rem;
+    }
+
+    li { margin-bottom: 0.35rem; }
 
     /* Response comparison */
     .response-pair {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
-      margin: 1rem 0;
+      margin: 0.75rem 0 1rem;
     }
 
     @media (max-width: 540px) {
@@ -107,33 +206,18 @@
     .response {
       border: 1px solid #ddd;
       padding: 1rem;
-      font-size: 0.93rem;
+      font-size: 0.9rem;
       color: #333;
     }
 
     .response .label { margin-bottom: 0.5rem; }
 
-    /* Data tiers */
-    .tier {
-      display: grid;
-      grid-template-columns: 1.5rem 1fr;
-      gap: 0.75rem;
-      margin-bottom: 1.25rem;
-      align-items: start;
-    }
-
-    .tier-num {
-      font-style: italic;
-      color: #888;
-      padding-top: 0.05rem;
-    }
-
     /* Contribution cards */
     .contrib-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 1.25rem;
+      margin: 1rem 0 1.5rem;
     }
 
     @media (max-width: 540px) {
@@ -142,60 +226,56 @@
 
     .contrib-card {
       border: 1px solid #ddd;
-      padding: 1.25rem;
+      padding: 1.2rem;
     }
 
-    .contrib-card h3 {
-      margin-top: 0;
-      margin-bottom: 0.6rem;
+    .contrib-card h3 { margin-top: 0; margin-bottom: 0.5rem; }
+    .contrib-card p { font-size: 0.9rem; }
+
+    /* Data tiers */
+    .tier {
+      display: grid;
+      grid-template-columns: 1.5rem 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.1rem;
+      align-items: start;
+      font-size: 0.95rem;
     }
 
-    .contrib-card p {
-      font-size: 0.93rem;
+    .tier-num {
+      color: #bbb;
+      font-weight: 400;
+      padding-top: 0.05rem;
     }
 
-    /* Task accordion */
-    .task {
-      border-top: 1px solid #ddd;
+    /* CTA */
+    .cta {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      text-align: center;
     }
 
-    .task:last-child {
-      border-bottom: 1px solid #ddd;
-    }
+    .cta p { font-size: 0.95rem; margin-bottom: 0.75rem; }
 
-    .task-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.85rem 0;
-      cursor: pointer;
-      font-size: 0.97rem;
-      font-weight: bold;
-      user-select: none;
+    .cta a {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
     }
-
-    .task-title span {
-      font-weight: normal;
-      color: #888;
-      font-size: 1.1rem;
-    }
-
-    .task-body {
-      display: none;
-      padding-bottom: 1.25rem;
-      font-size: 0.94rem;
-      color: #333;
-    }
-
-    .task.open .task-body { display: block; }
 
     /* Contact */
     .contact {
-      margin-top: 3rem;
+      margin-top: 2rem;
       padding-top: 2rem;
       border-top: 1px solid #ddd;
-      font-size: 0.95rem;
-      color: #555;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
@@ -206,73 +286,88 @@
   <p>A community effort to evaluate AI in the legal domain — Stanford University</p>
 </header>
 
+<!-- TL;DR -->
+<div class="tldr">
+  <strong>TL;DR</strong>
+  We are building a benchmark to evaluate AI systems that grade other AI systems' legal work. If you are a lawyer or law firm with ideas for relevant tasks — or access to legal work product that could serve as data — we want to hear from you. Contributors who provide data will be credited as co-authors.
+</div>
+
 <!-- Background -->
-<section>
-  <h2>Background</h2>
-  <p>AI tools are now widely used across the legal profession — for tasks like reviewing contracts, summarizing case law, drafting pleadings, and analyzing depositions. As these tools become more capable and more relied upon, a critical question emerges: <strong>how do we know whether an AI is actually doing a good job?</strong></p>
-  <p>Evaluating AI performance in legal settings is harder than it sounds. Legal quality is nuanced — a contract clause might be technically correct but poorly suited to a client's risk tolerance; a case summary might be accurate but miss the strategically important detail. Assessing this kind of quality has traditionally required expert human review, which is expensive, slow, and difficult to scale.</p>
-  <p>LegalBench V2 (LB2) is a follow-up to the original <a href="https://hazyresearch.stanford.edu/legalbench/" target="_blank">LegalBench project</a> from 2023. LB2 focuses specifically on evaluating a class of AI tools called <em>autograders</em> — AI systems that can assess the quality of other AI systems' outputs in legal contexts.</p>
-  <p>The original LegalBench, published at NeurIPS 2023, was the first large-scale open-source effort to benchmark legal reasoning in AI. Drawing on contributions from 40 collaborators — lawyers, law professors, computational legal scholars, and legal aid organizations — it assembled 162 tasks spanning six types of legal reasoning, and used them to evaluate 20 different AI models. The project was widely adopted by AI researchers as a standard reference for understanding what AI can and cannot do in legal contexts. LB2 builds on that foundation, and extends it to a new and increasingly important question: not just whether AI can perform legal tasks, but whether AI can reliably judge the quality of legal work produced by other AI systems.</p>
-</section>
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
+    <h2>Background</h2>
+    <span class="toggle">+</span>
+  </div>
+  <div class="accordion-body">
+    <p>AI tools are now widely used across the legal profession — for tasks like reviewing contracts, summarizing case law, drafting pleadings, and analyzing depositions. As these tools become more capable and more relied upon, a critical question emerges: <strong>how do we know whether an AI is actually doing a good job?</strong></p>
+    <p>Evaluating AI performance in legal settings is harder than it sounds. Legal quality is nuanced — a contract clause might be technically correct but poorly suited to a client's risk tolerance; a case summary might be accurate but miss the strategically important detail. Assessing this kind of quality has traditionally required expert human review, which is expensive, slow, and difficult to scale.</p>
+    <p>LegalBench V2 (LB2) is a follow-up to the original <a href="https://hazyresearch.stanford.edu/legalbench/" target="_blank">LegalBench project</a> from 2023. LB2 focuses specifically on evaluating a class of AI tools called <em>autograders</em> — AI systems that can assess the quality of other AI systems' outputs in legal contexts.</p>
+    <p>The original LegalBench, published at NeurIPS 2023, was the first large-scale open-source effort to benchmark legal reasoning in AI. Drawing on contributions from 40 collaborators — lawyers, law professors, computational legal scholars, and legal aid organizations — it assembled 162 tasks spanning six types of legal reasoning, and used them to evaluate 20 different AI models. The project was widely adopted by AI researchers as a standard reference for understanding what AI can and cannot do in legal contexts. LB2 builds on that foundation, and extends it to a new and increasingly important question: not just whether AI can perform legal tasks, but whether AI can reliably judge the quality of legal work produced by other AI systems.</p>
+  </div>
+</div>
 
-<hr />
-
-<!-- Autograders -->
-<section>
-  <h2>What is an Autograder?</h2>
-  <p>An <strong>autograder</strong> is an AI system that evaluates the output of another AI system — an automated quality reviewer. If you want to know whether an AI tool is drafting good contracts, you would traditionally need experienced attorneys to review hundreds of AI-generated drafts. This is accurate but expensive and slow. An autograder, if reliable, can do the same thing automatically.</p>
-  <p>Autograders are already widely used in other fields of AI development. The question LB2 asks is: <strong>can autograders be trusted to evaluate AI performance in legal tasks — and if so, which ones?</strong></p>
-
-  <h3>Preference-based autograders</h3>
-  <p>LB2 focuses on <strong>preference-based autograders</strong>. Rather than scoring a single output, a preference-based autograder is given two responses to the same task and asked to decide which one an expert attorney would prefer. It takes three inputs:</p>
-  <ul style="margin: 0.75rem 0 0.75rem 1.5rem; color: #222;">
-    <li style="margin-bottom:0.4rem;"><strong>A task instruction</strong> — the legal task being performed</li>
-    <li style="margin-bottom:0.4rem;"><strong>Response A</strong> — one possible output</li>
-    <li><strong>Response B</strong> — a second possible output</li>
-  </ul>
-  <p>If an autograder consistently agrees with experienced attorneys across many such comparisons, it can serve as a reliable proxy for expert legal judgment — enabling AI tools to be evaluated quickly and at scale.</p>
-</section>
-
-<hr />
+<!-- What is an Autograder -->
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
+    <h2>What is an Autograder?</h2>
+    <span class="toggle">+</span>
+  </div>
+  <div class="accordion-body">
+    <p>An <strong>autograder</strong> is an AI system that evaluates the output of another AI system — an automated quality reviewer. If you want to know whether an AI tool is drafting good contracts, you would traditionally need experienced attorneys to review hundreds of AI-generated drafts. This is accurate but expensive and slow. An autograder, if reliable, can do the same thing automatically.</p>
+    <p>Autograders are already widely used in other fields of AI development. The question LB2 asks is: <strong>can autograders be trusted to evaluate AI performance in legal tasks — and if so, which ones?</strong></p>
+    <h3>Preference-based autograders</h3>
+    <p>LB2 focuses on <strong>preference-based autograders</strong>. Rather than scoring a single output, a preference-based autograder is given two responses to the same task and asked to decide which one an expert attorney would prefer. It takes three inputs:</p>
+    <ul>
+      <li><strong>A task instruction</strong> — the legal task being performed</li>
+      <li><strong>Response A</strong> — one possible output</li>
+      <li><strong>Response B</strong> — a second possible output</li>
+    </ul>
+    <p>If an autograder consistently agrees with experienced attorneys across many such comparisons, it can serve as a reliable proxy for expert legal judgment — enabling AI tools to be evaluated quickly and at scale.</p>
+  </div>
+</div>
 
 <!-- Worked Example -->
-<section>
-  <h2>A Worked Example: Case Summarization</h2>
-  <p>Consider the task of <strong>case summarization</strong> — one of the most common uses of AI in legal practice. Attorneys use AI to generate summaries of judicial opinions, quickly extracting key holdings, facts, and reasoning from lengthy decisions. But how do you know whether a summary is actually good?</p>
-
-  <p class="label">Task instruction</p>
-  <blockquote>"Summarize the following judicial opinion for a litigator who needs to understand the court's holding on personal jurisdiction, the key facts the court relied on, and any limitations the court placed on its reasoning. Write in plain English, in 300 words or fewer."</blockquote>
-
-  <p class="label" style="margin-top:1.25rem;">Input data</p>
-  <p>The full text of a judicial opinion — for example, a district court ruling on a motion to dismiss for lack of personal jurisdiction.</p>
-
-  <p class="label" style="margin-top:1.25rem;">Two responses to compare</p>
-  <div class="response-pair">
-    <div class="response">
-      <div class="label">Response A</div>
-      Accurately states the holding, but buries it after two paragraphs of procedural history. Omits the court's limiting language. Uses Latin phrases without explanation.
-    </div>
-    <div class="response">
-      <div class="label">Response B</div>
-      Leads with the holding in the first sentence. Identifies the two facts the court found dispositive. Flags the key factual distinction limiting the ruling's precedential scope. Written in plain English throughout.
-    </div>
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
+    <h2>A Worked Example: Case Summarization</h2>
+    <span class="toggle">+</span>
   </div>
-
-  <p>The autograder is asked: <em>which of these would an experienced litigator prefer?</em> If it reliably selects the stronger summary across many opinion–pair combinations, it can serve as a trustworthy evaluator of AI-generated summaries — without requiring a human attorney to weigh in each time.</p>
-</section>
-
-<hr />
+  <div class="accordion-body">
+    <p>Consider the task of <strong>case summarization</strong> — one of the most common uses of AI in legal practice. Attorneys use AI to generate summaries of judicial opinions, quickly extracting key holdings, facts, and reasoning from lengthy decisions. But how do you know whether a summary is actually good?</p>
+    <p class="label">Task instruction</p>
+    <blockquote>"Summarize the following judicial opinion for a litigator who needs to understand the court's holding on personal jurisdiction, the key facts the court relied on, and any limitations the court placed on its reasoning. Write in plain English, in 300 words or fewer."</blockquote>
+    <p class="label" style="margin-top:1.25rem;">Input data</p>
+    <p>The full text of a judicial opinion — for example, a district court ruling on a motion to dismiss for lack of personal jurisdiction.</p>
+    <p class="label" style="margin-top:1.25rem;">Two responses to compare</p>
+    <div class="response-pair">
+      <div class="response">
+        <div class="label">Response A</div>
+        Accurately states the holding, but buries it after two paragraphs of procedural history. Omits the court's limiting language. Uses Latin phrases without explanation.
+      </div>
+      <div class="response">
+        <div class="label">Response B</div>
+        Leads with the holding in the first sentence. Identifies the two facts the court found dispositive. Flags the key factual distinction limiting the ruling's precedential scope. Written in plain English throughout.
+      </div>
+    </div>
+    <p>The autograder is asked: <em>which of these would an experienced litigator prefer?</em> If it reliably selects the stronger summary across many opinion–pair combinations, it can serve as a trustworthy evaluator of AI-generated summaries — without requiring a human attorney to weigh in each time.</p>
+  </div>
+</div>
 
 <!-- Task Examples -->
-<section>
-  <h2>Examples of Tasks We Are Interested In</h2>
-  <p>Below are examples of what a LB2 task looks like in practice. These are illustrative — we are actively seeking ideas beyond these categories.</p>
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
+    <h2>Examples of Tasks We Are Interested In</h2>
+    <span class="toggle">+</span>
+  </div>
+  <div class="accordion-body">
+    <p style="margin-bottom:1.25rem;">Below are examples of what a LB2 task looks like in practice. These are illustrative — we are actively seeking ideas beyond these categories.</p>
 
-  <div style="margin-top: 1.5rem;">
-
-    <div class="task" onclick="toggleTask(this)">
-      <div class="task-title">Legal Education — Law School Exam Grading <span>+</span></div>
-      <div class="task-body">
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Legal Education — Law School Exam Grading
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
         <p class="label">Example instruction</p>
         <blockquote>"You are grading a first-year law school exam. The question asked students to analyze whether the following facts give rise to a valid negligence claim under New York law. The answer should identify the relevant elements, apply each to the facts, and reach a reasoned conclusion. [Exam question text]"</blockquote>
         <p class="label" style="margin-top:1rem;">Input data</p>
@@ -282,9 +377,12 @@
       </div>
     </div>
 
-    <div class="task" onclick="toggleTask(this)">
-      <div class="task-title">Depositions — Question Strategy Evaluation <span>+</span></div>
-      <div class="task-body">
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Depositions — Question Strategy Evaluation
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
         <p class="label">Example instruction</p>
         <blockquote>"You represent the plaintiff in a personal injury case. The following is a summary of the dispute and a profile of the opposing party's key witness. [Case summary + witness profile]. Devise a deposition question strategy aimed at establishing that the witness had prior knowledge of the defect."</blockquote>
         <p class="label" style="margin-top:1rem;">Input data</p>
@@ -294,9 +392,12 @@
       </div>
     </div>
 
-    <div class="task" onclick="toggleTask(this)">
-      <div class="task-title">Brief Writing — Argument Quality <span>+</span></div>
-      <div class="task-body">
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Brief Writing — Argument Quality
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
         <p class="label">Example instruction</p>
         <blockquote>"Draft the argument section of an appellant's brief addressing whether the trial court abused its discretion in excluding the expert's testimony under FRE 702. The relevant trial court ruling and expert report are appended. [Documents]"</blockquote>
         <p class="label" style="margin-top:1rem;">Input data</p>
@@ -306,9 +407,12 @@
       </div>
     </div>
 
-    <div class="task" onclick="toggleTask(this)">
-      <div class="task-title">Contract Drafting — Clause Quality <span>+</span></div>
-      <div class="task-body">
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Contract Drafting — Clause Quality
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
         <p class="label">Example instruction</p>
         <blockquote>"Draft a forum-selection clause for a commercial services agreement between a Delaware-incorporated technology company and a California-based vendor. The clause should favor the technology company and account for disputes arising under both state and federal law."</blockquote>
         <p class="label" style="margin-top:1rem;">Input data</p>
@@ -318,9 +422,12 @@
       </div>
     </div>
 
-    <div class="task" onclick="toggleTask(this)">
-      <div class="task-title">Regulatory Analysis — Compliance Assessment <span>+</span></div>
-      <div class="task-body">
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Regulatory Analysis — Compliance Assessment
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
         <p class="label">Example instruction</p>
         <blockquote>"A fintech startup intends to offer a peer-to-peer lending product in all 50 states. Identify the primary federal and state regulatory frameworks that would apply and describe the key compliance obligations the company must address before launch. [Company description and product term sheet]"</blockquote>
         <p class="label" style="margin-top:1rem;">Input data</p>
@@ -331,68 +438,79 @@
     </div>
 
   </div>
-</section>
-
-<hr />
-
-<!-- How to Contribute -->
-<section>
-  <h2>How to Contribute</h2>
-  <p>Like LegalBench 1, LB2 is designed to be a community effort. There are two ways to participate.</p>
-
-  <div class="contrib-grid">
-    <div class="contrib-card">
-      <h3>Task Idea Contribution</h3>
-      <p>If you can identify a legal task where AI evaluation matters, we want to hear from you. You do not need to provide any data — describing the task and why it matters is itself valuable. We will work with collaborators to develop datasets around promising ideas, though we cannot guarantee inclusion of every submission.</p>
-    </div>
-    <div class="contrib-card">
-      <h3>Task Data Contribution</h3>
-      <p>If you have both a task idea and data to contribute, you can indicate so via this form. We will work with you to incorporate the data into LB2. <strong>Contributors who provide task data will be credited as co-authors on LB2.</strong></p>
-    </div>
-  </div>
-
-  <h3>What counts as data?</h3>
-  <p>For task data contributions, we distinguish between three types — they are not equally valuable, and co-authorship requires at minimum the first two.</p>
-
-  <div style="margin-top: 1rem;">
-    <div class="tier">
-      <div class="tier-num">1.</div>
-      <div>
-        <strong>Task instructions</strong> — required for co-authorship<br />
-        The specific prompt or set of prompts defining the legal task. For example: <em>"Summarize the following judicial opinion, identifying the court's holding, the key facts relied upon, and any limitations on the reasoning. Write in plain English, in 300 words or fewer."</em>
-      </div>
-    </div>
-    <div class="tier">
-      <div class="tier-num">2.</div>
-      <div>
-        <strong>Input data</strong> — required for co-authorship<br />
-        The raw legal materials the instruction is applied to — for example, the full text of judicial opinions, deposition transcripts, or contract templates.
-      </div>
-    </div>
-    <div class="tier">
-      <div class="tier-num">3.</div>
-      <div>
-        <strong>Human-written responses</strong> — optional but highly valuable<br />
-        Pairs of responses drafted by attorneys or other qualified professionals, <em>not</em> AI-generated. These serve as a quality benchmark. If you have access to attorney work product that could serve as response pairs, we strongly encourage you to discuss contribution with us.
-      </div>
-    </div>
-  </div>
-</section>
-
-<div style="margin-top: 3rem; padding: 1.5rem; border: 1px solid #ddd; text-align: center;">
-  <p style="margin-bottom: 0.75rem; font-size: 0.95rem;">Ready to contribute a task idea or dataset?</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSekltQav_5YoMYAWR3jGmiU1xDN3Y33JDHbYyDQVhAoHkF3Mw/viewform?usp=dialog" target="_blank" style="display: inline-block; padding: 0.6rem 1.4rem; background: #111; color: #fff; text-decoration: none; font-family: -apple-system, Helvetica, Arial, sans-serif; font-size: 0.85rem; letter-spacing: 0.04em;">Open the contribution form →</a>
 </div>
 
+<!-- How to Contribute -->
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
+    <h2>How to Contribute</h2>
+    <span class="toggle">+</span>
+  </div>
+  <div class="accordion-body">
+    <p>Like LegalBench 1, LB2 is designed to be a community effort. There are two ways to participate.</p>
+
+    <div class="contrib-grid">
+      <div class="contrib-card">
+        <h3>Task Idea Contribution</h3>
+        <p>If you can identify a legal task where AI evaluation matters, we want to hear from you. You do not need to provide any data — describing the task and why it matters is itself valuable. We will work with collaborators to develop datasets around promising ideas, though we cannot guarantee inclusion of every submission.</p>
+      </div>
+      <div class="contrib-card">
+        <h3>Task Data Contribution</h3>
+        <p>If you have both a task idea and data to contribute, you can indicate so via this form. We will work with you to incorporate the data into LB2. <strong>Contributors who provide task data will be credited as co-authors on LB2.</strong></p>
+      </div>
+    </div>
+
+    <h3>What counts as data?</h3>
+    <p>For task data contributions, we distinguish between three types — they are not equally valuable, and co-authorship requires at minimum the first two.</p>
+
+    <div style="margin-top: 1rem;">
+      <div class="tier">
+        <div class="tier-num">1.</div>
+        <div>
+          <strong>Task instructions</strong> — required for co-authorship<br />
+          The specific prompt or set of prompts defining the legal task. For example: <em>"Summarize the following judicial opinion, identifying the court's holding, the key facts relied upon, and any limitations on the reasoning. Write in plain English, in 300 words or fewer."</em>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-num">2.</div>
+        <div>
+          <strong>Input data</strong> — required for co-authorship<br />
+          The raw legal materials the instruction is applied to — for example, the full text of judicial opinions, deposition transcripts, or contract templates.
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-num">3.</div>
+        <div>
+          <strong>Human-written responses</strong> — optional but highly valuable<br />
+          Pairs of responses drafted by attorneys or other qualified professionals, <em>not</em> AI-generated. These serve as a quality benchmark. If you have access to attorney work product that could serve as response pairs, we strongly encourage you to discuss contribution with us.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <p>Ready to contribute a task idea or dataset?</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSekltQav_5YoMYAWR3jGmiU1xDN3Y33JDHbYyDQVhAoHkF3Mw/viewform?usp=dialog" target="_blank">Open the contribution form →</a>
+</div>
+
+<!-- Contact -->
 <div class="contact">
   <p>For questions about LB2, contribution logistics, or data handling, please contact <a href="mailto:nguha@cs.stanford.edu">Neel Guha — nguha@cs.stanford.edu</a>.</p>
 </div>
 
 <script>
+  function toggleAccordion(el) {
+    el.classList.toggle('open');
+    const toggle = el.querySelector('.accordion-header .toggle');
+    toggle.textContent = el.classList.contains('open') ? '−' : '+';
+  }
+
   function toggleTask(el) {
     el.classList.toggle('open');
-    const span = el.querySelector('.task-title span');
-    span.textContent = el.classList.contains('open') ? '−' : '+';
+    const toggle = el.querySelector('.task-item-header .toggle');
+    toggle.textContent = el.classList.contains('open') ? '−' : '+';
   }
 </script>
 
