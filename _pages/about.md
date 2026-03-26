@@ -14,7 +14,7 @@ I am affiliated with the [Hazy Research Lab](https://hazyresearch.stanford.edu/)
 
 Here's a representative sample of my recent work:
 
-- [A Reasoning-Focused Legal Retrieval Benchmark](/assets/pdf/zheng_2025_reasoning_focused_legal_rag_benchmark.pdf) (CS&Law 2025)
+- [A Reasoning-Focused Legal Retrieval Benchmark](/assets/pdf/zheng_2025_reasoning_focused_legal_rag_benchmark.pdf) (CSLaw 2025)
 - [AI Regulation Has Its Own Alignment Problem](https://www.gwlr.org/wp-content/uploads/2024/12/92-Geo.-Wash.-L.-Rev.-1473.pdf) (GW L. Rev. 2024)
 - [Understanding Liability Risk from Using Health Care Artificial Intelligence Tools](https://doi.org/10.1056/NEJMhle2308901) (NEJM 2024)
 - [Smoothie: Label Free Language Model Routing](https://arxiv.org/abs/2412.04692) (NeurIPS 2024)
