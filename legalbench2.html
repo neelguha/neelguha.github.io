@@ -105,11 +105,7 @@
       display: block;
     }
 
-    .accordion.open > .accordion-header .toggle {
-      content: '−';
-    }
-
-    /* Nested task items — simple, not accordion */
+    /* Nested task items */
     .task-item {
       border-top: 1px solid #f0f0f0;
       padding: 0.85rem 0;
@@ -283,46 +279,48 @@
 
 <header class="site-header">
   <h1>LegalBench V2</h1>
-  <p>A community effort to evaluate AI in the legal domain — Stanford University</p>
+  <p>Building a benchmark for legal autograders</p>
 </header>
 
 <!-- TL;DR -->
 <div class="tldr">
   <strong>TL;DR</strong>
-  We are building a benchmark to evaluate AI systems that grade other AI systems' legal work. If you are a lawyer or law firm with ideas for relevant tasks — or access to legal work product that could serve as data — we want to hear from you. Contributors who provide data will be credited as co-authors.
+  We are building a benchmark to promote development of legal autograders — AI systems that grade other AI systems' legal work. If you are a lawyer, a law firm, or any other legal organization with ideas for legal AI tasks — we want to hear from you. Contributors who make meaningful contributions will be credited as co-authors.
 </div>
 
-<!-- Background -->
+<!-- Motivation -->
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
-    <h2>Background</h2>
+    <h2>Motivation</h2>
     <span class="toggle">+</span>
   </div>
   <div class="accordion-body">
-    <p>AI tools are now widely used across the legal profession — for tasks like reviewing contracts, summarizing case law, drafting pleadings, and analyzing depositions. As these tools become more capable and more relied upon, a critical question emerges: <strong>how do we know whether an AI is actually doing a good job?</strong></p>
-    <p>Evaluating AI performance in legal settings is harder than it sounds. Legal quality is nuanced — a contract clause might be technically correct but poorly suited to a client's risk tolerance; a case summary might be accurate but miss the strategically important detail. Assessing this kind of quality has traditionally required expert human review, which is expensive, slow, and difficult to scale.</p>
-    <p>LegalBench V2 (LB2) is a follow-up to the original <a href="https://hazyresearch.stanford.edu/legalbench/" target="_blank">LegalBench project</a> from 2023. LB2 focuses specifically on evaluating a class of AI tools called <em>autograders</em> — AI systems that can assess the quality of other AI systems' outputs in legal contexts.</p>
-    <p>The original LegalBench, published at NeurIPS 2023, was the first large-scale open-source effort to benchmark legal reasoning in AI. Drawing on contributions from 40 collaborators — lawyers, law professors, computational legal scholars, and legal aid organizations — it assembled 162 tasks spanning six types of legal reasoning, and used them to evaluate 20 different AI models. The project was widely adopted by AI researchers as a standard reference for understanding what AI can and cannot do in legal contexts. LB2 builds on that foundation, and extends it to a new and increasingly important question: not just whether AI can perform legal tasks, but whether AI can reliably judge the quality of legal work produced by other AI systems.</p>
+    <p>A significant barrier to the development and deployment of legal AI systems is the cost of evaluation. For AI systems which output text — such as tools for drafting, analysis, summarization, or question-answering — evaluation requires that human attorneys manually inspect every output. This process is time-consuming, expensive, and must be repeated every time the underlying AI system is updated or modified.</p>
+
+    <p>One possible solution is <strong>autograders</strong>. Autograders are AI systems which automate the process of human review. In other domains, AI researchers have found that autograders can reliably replace human grading, offering robust evaluation results at a fraction of the price. Indeed, autograder-variants have been essential to substantial recent improvements in generative AI.</p>
+
+    <p>Unfortunately, autograders for legal tasks remain understudied and underdeveloped. The primary reason is a lack of benchmarks for measuring autograders on legal tasks. Whereas AI researchers have shown that autograders for non-legal tasks frequently "agree" with human evaluation, little is known about the extent to which legal autograders agree with human lawyer assessments of quality.</p>
+
+    <p>LegalBench V2 (LB2) is an ongoing project attempting to fill this gap. Our goal is to build benchmark datasets which allow us to validate and compare different autograders for different legal tasks. This benchmark should reveal those legal tasks where existing AI systems may be relied upon in place of costly human judgements. It will also provide a way to iterate on legal autograder designs, allowing us to identify more general strategies for legal autograder construction.</p>
+
+    <p>LB2 builds upon the original <a href="https://hazyresearch.stanford.edu/legalbench/" target="_blank">LegalBench project</a> from 2023. Our goal in LB2 is to spur development on legal autograders by releasing datasets for benchmarking autograders — allowing us to measure how well different autograders actually correlate with expert lawyer judgements across different tasks. The original LegalBench, published at NeurIPS 2023, was the first large-scale open-source effort to benchmark legal reasoning in AI. Drawing on contributions from 40 collaborators — lawyers, law professors, computational legal scholars, and legal aid organizations — it assembled 162 tasks spanning six types of legal reasoning, and used them to evaluate 20 different AI models. The project was widely adopted by AI researchers as a standard reference for understanding what AI can and cannot do in legal contexts. LB2 builds on that foundation, and extends it to a new and increasingly important question: not just whether AI can perform legal tasks, but whether AI can reliably judge the quality of legal work produced by other AI systems.</p>
   </div>
 </div>
 
-<!-- What is an Autograder -->
+<!-- Preference-Based Autograders -->
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
-    <h2>What is an Autograder?</h2>
+    <h2>Preference-Based Autograders</h2>
     <span class="toggle">+</span>
   </div>
   <div class="accordion-body">
-    <p>An <strong>autograder</strong> is an AI system that evaluates the output of another AI system — an automated quality reviewer. If you want to know whether an AI tool is drafting good contracts, you would traditionally need experienced attorneys to review hundreds of AI-generated drafts. This is accurate but expensive and slow. An autograder, if reliable, can do the same thing automatically.</p>
-    <p>Autograders are already widely used in other fields of AI development. The question LB2 asks is: <strong>can autograders be trusted to evaluate AI performance in legal tasks — and if so, which ones?</strong></p>
-    <h3>Preference-based autograders</h3>
-    <p>LB2 focuses on <strong>preference-based autograders</strong>. Rather than scoring a single output, a preference-based autograder is given two responses to the same task and asked to decide which one an expert attorney would prefer. It takes three inputs:</p>
+    <p>LB2 focuses on <strong>preference-based autograders</strong>. Preference-based autograders are given two responses to the same task and asked to decide which one an expert attorney would prefer. Specifically, these autograders take three inputs:</p>
     <ul>
       <li><strong>A task instruction</strong> — the legal task being performed</li>
       <li><strong>Response A</strong> — one possible output</li>
       <li><strong>Response B</strong> — a second possible output</li>
     </ul>
-    <p>If an autograder consistently agrees with experienced attorneys across many such comparisons, it can serve as a reliable proxy for expert legal judgment — enabling AI tools to be evaluated quickly and at scale.</p>
+    <p>To validate a preference-based autograder for a task, we first have a set of human attorneys express their preferences between different outputs for the same task instruction. After collecting this data, we can measure — for any autograder — how often its judgements agree with those of humans. A good autograder is one that tends to pick the same outputs as the human attorneys; a bad autograder is one that frequently disagrees. If an autograder agrees with human judgements a substantial proportion of the time (e.g., 70%+), then it can be treated as a reliable proxy for human judgements.</p>
   </div>
 </div>
 
@@ -333,110 +331,13 @@
     <span class="toggle">+</span>
   </div>
   <div class="accordion-body">
-    <p>Consider the task of <strong>case summarization</strong> — one of the most common uses of AI in legal practice. Attorneys use AI to generate summaries of judicial opinions, quickly extracting key holdings, facts, and reasoning from lengthy decisions. But how do you know whether a summary is actually good?</p>
-    <p class="label">Task instruction</p>
-    <blockquote>"Summarize the following judicial opinion for a litigator who needs to understand the court's holding on personal jurisdiction, the key facts the court relied on, and any limitations the court placed on its reasoning. Write in plain English, in 300 words or fewer."</blockquote>
-    <p class="label" style="margin-top:1.25rem;">Input data</p>
-    <p>The full text of a judicial opinion — for example, a district court ruling on a motion to dismiss for lack of personal jurisdiction.</p>
-    <p class="label" style="margin-top:1.25rem;">Two responses to compare</p>
-    <div class="response-pair">
-      <div class="response">
-        <div class="label">Response A</div>
-        Accurately states the holding, but buries it after two paragraphs of procedural history. Omits the court's limiting language. Uses Latin phrases without explanation.
-      </div>
-      <div class="response">
-        <div class="label">Response B</div>
-        Leads with the holding in the first sentence. Identifies the two facts the court found dispositive. Flags the key factual distinction limiting the ruling's precedential scope. Written in plain English throughout.
-      </div>
-    </div>
-    <p>The autograder is asked: <em>which of these would an experienced litigator prefer?</em> If it reliably selects the stronger summary across many opinion–pair combinations, it can serve as a trustworthy evaluator of AI-generated summaries — without requiring a human attorney to weigh in each time.</p>
-  </div>
-</div>
-
-<!-- Task Examples -->
-<div class="accordion">
-  <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
-    <h2>Examples of Tasks We Are Interested In</h2>
-    <span class="toggle">+</span>
-  </div>
-  <div class="accordion-body">
-    <p style="margin-bottom:1.25rem;">Below are examples of what a LB2 task looks like in practice. These are illustrative — we are actively seeking ideas beyond these categories.</p>
-
-    <div class="task-item">
-      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
-        Legal Education — Law School Exam Grading
-        <span class="toggle">+</span>
-      </div>
-      <div class="task-item-body">
-        <p class="label">Example instruction</p>
-        <blockquote>"You are grading a first-year law school exam. The question asked students to analyze whether the following facts give rise to a valid negligence claim under New York law. The answer should identify the relevant elements, apply each to the facts, and reach a reasoned conclusion. [Exam question text]"</blockquote>
-        <p class="label" style="margin-top:1rem;">Input data</p>
-        <p>A set of student essay responses to the exam question.</p>
-        <p class="label" style="margin-top:0.75rem;">Responses to compare</p>
-        <p>Pairs of student essays — one stronger, one weaker — ideally with attorney or professor annotations indicating which is preferred and why.</p>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
-        Depositions — Question Strategy Evaluation
-        <span class="toggle">+</span>
-      </div>
-      <div class="task-item-body">
-        <p class="label">Example instruction</p>
-        <blockquote>"You represent the plaintiff in a personal injury case. The following is a summary of the dispute and a profile of the opposing party's key witness. [Case summary + witness profile]. Devise a deposition question strategy aimed at establishing that the witness had prior knowledge of the defect."</blockquote>
-        <p class="label" style="margin-top:1rem;">Input data</p>
-        <p>Case summaries and witness profiles from real or anonymized litigation scenarios.</p>
-        <p class="label" style="margin-top:0.75rem;">Responses to compare</p>
-        <p>Pairs of deposition strategies drafted by attorneys, varying in experience or approach. Human-authored responses are strongly preferred.</p>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
-        Brief Writing — Argument Quality
-        <span class="toggle">+</span>
-      </div>
-      <div class="task-item-body">
-        <p class="label">Example instruction</p>
-        <blockquote>"Draft the argument section of an appellant's brief addressing whether the trial court abused its discretion in excluding the expert's testimony under FRE 702. The relevant trial court ruling and expert report are appended. [Documents]"</blockquote>
-        <p class="label" style="margin-top:1rem;">Input data</p>
-        <p>Trial court rulings, expert reports, and relevant procedural history.</p>
-        <p class="label" style="margin-top:0.75rem;">Responses to compare</p>
-        <p>Pairs of attorney-drafted argument sections, varying in quality or strategic approach.</p>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
-        Contract Drafting — Clause Quality
-        <span class="toggle">+</span>
-      </div>
-      <div class="task-item-body">
-        <p class="label">Example instruction</p>
-        <blockquote>"Draft a forum-selection clause for a commercial services agreement between a Delaware-incorporated technology company and a California-based vendor. The clause should favor the technology company and account for disputes arising under both state and federal law."</blockquote>
-        <p class="label" style="margin-top:1rem;">Input data</p>
-        <p>Drafting instructions specifying transaction context, parties, and attorney objectives for each clause.</p>
-        <p class="label" style="margin-top:0.75rem;">Responses to compare</p>
-        <p>Pairs of attorney-drafted clauses for the same scenario.</p>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
-        Regulatory Analysis — Compliance Assessment
-        <span class="toggle">+</span>
-      </div>
-      <div class="task-item-body">
-        <p class="label">Example instruction</p>
-        <blockquote>"A fintech startup intends to offer a peer-to-peer lending product in all 50 states. Identify the primary federal and state regulatory frameworks that would apply and describe the key compliance obligations the company must address before launch. [Company description and product term sheet]"</blockquote>
-        <p class="label" style="margin-top:1rem;">Input data</p>
-        <p>Regulatory questions or compliance scenarios with accompanying company and product information.</p>
-        <p class="label" style="margin-top:0.75rem;">Responses to compare</p>
-        <p>Pairs of legal analyses addressing the same scenario, varying in thoroughness or practical focus.</p>
-      </div>
-    </div>
-
+    <p>Datasets for benchmarking autograders have three parts: a set of instructions, a set of model responses for each instruction, and a set of preferences between those responses. To make this concrete, consider the task of <strong>case summarization</strong>, in which AI systems are used to summarize cases. Here,</p>
+    <ul>
+      <li>The instructions correspond to different cases</li>
+      <li>The responses correspond to different summaries (generated by different LLMs)</li>
+      <li>The preferences correspond to judgements by human attorneys about summary quality. These judgements are produced by showing a set of attorneys different pairs of summaries for each case, and asking them to select the summary they think is superior.</li>
+    </ul>
+    <p>Data of this form can be used to validate autograders. Specifically, we would feed into an autograder (most likely an LLM) each case and pair of summaries. We would ask it to select the summary that best reflected the criteria, and we would measure how often the autograder's choice "agrees" with the human attorney's choice. The more frequently an autograder agrees with human attorneys, the more reliable it is likely to be.</p>
   </div>
 </div>
 
@@ -456,36 +357,141 @@
       </div>
       <div class="contrib-card">
         <h3>Task Data Contribution</h3>
-        <p>If you have both a task idea and data to contribute, you can indicate so via this form. We will work with you to incorporate the data into LB2. <strong>Contributors who provide task data will be credited as co-authors on LB2.</strong></p>
+        <p>If you have both a task idea and instructions to contribute, you can indicate so via this form. Provided instructions meet minimum quality standards, we will work with you to build a benchmark corresponding to your instructions in LB2. <strong>Contributors who provide task data will be credited as co-authors on LB2.</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Task Examples -->
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this.parentElement)">
+    <h2>Examples of Tasks and Data We Are Interested In</h2>
+    <span class="toggle">+</span>
+  </div>
+  <div class="accordion-body">
+    <p style="margin-bottom:1.25rem;">Below are some examples of potential LB2 tasks. These are intended to be illustrative — we are actively seeking ideas beyond these categories.</p>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Legal Education — Law School Exam Grading
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to law school exam questions, and responses correspond to student essays. An autograder for this task would assess essay quality in the same way a professor or supervising attorney would.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"You are grading a first-year law school exam. The question asked students to analyze whether the following facts give rise to a valid negligence claim under New York law. The answer should identify the relevant elements, apply each to the facts, and reach a reasoned conclusion. [Exam question text]"</blockquote>
       </div>
     </div>
 
-    <h3>What counts as data?</h3>
-    <p>For task data contributions, we distinguish between three types — they are not equally valuable, and co-authorship requires at minimum the first two.</p>
-
-    <div style="margin-top: 1rem;">
-      <div class="tier">
-        <div class="tier-num">1.</div>
-        <div>
-          <strong>Task instructions</strong> — required for co-authorship<br />
-          The specific prompt or set of prompts defining the legal task. For example: <em>"Summarize the following judicial opinion, identifying the court's holding, the key facts relied upon, and any limitations on the reasoning. Write in plain English, in 300 words or fewer."</em>
-        </div>
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Depositions — Question Strategy Evaluation
+        <span class="toggle">+</span>
       </div>
-      <div class="tier">
-        <div class="tier-num">2.</div>
-        <div>
-          <strong>Input data</strong> — required for co-authorship<br />
-          The raw legal materials the instruction is applied to — for example, the full text of judicial opinions, deposition transcripts, or contract templates.
-        </div>
-      </div>
-      <div class="tier">
-        <div class="tier-num">3.</div>
-        <div>
-          <strong>Human-written responses</strong> — optional but highly valuable<br />
-          Pairs of responses drafted by attorneys or other qualified professionals, <em>not</em> AI-generated. These serve as a quality benchmark. If you have access to attorney work product that could serve as response pairs, we strongly encourage you to discuss contribution with us.
-        </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to deponent-specific litigation contexts — a description of the legal dispute and a profile of the witness. Responses correspond to deposition question strategies. An autograder for this task would assess which strategy is more likely to be effective.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"You represent the plaintiff in a personal injury case. The following is a summary of the dispute and a profile of the opposing party's key witness. [Case summary + witness profile]. Devise a deposition question strategy aimed at establishing that the witness had prior knowledge of the defect."</blockquote>
       </div>
     </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Brief Writing — Argument Quality
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to litigation contexts and the specific issue on appeal. Responses correspond to argument sections of briefs. An autograder for this task would assess which argument is stronger, better reasoned, or more persuasive.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"Draft the argument section of an appellant's brief addressing whether the trial court abused its discretion in excluding the expert's testimony under FRE 702. The relevant trial court ruling and expert report are appended. [Documents]"</blockquote>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Contract Drafting — Clause Quality
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to drafting scenarios specifying the transaction, parties, and the attorney's objectives for a given clause. Responses correspond to competing drafts. An autograder for this task would assess which draft better serves the client's interests.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"Draft a forum-selection clause for a commercial services agreement between a Delaware-incorporated technology company and a California-based vendor. The clause should favor the technology company and account for disputes arising under both state and federal law."</blockquote>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Regulatory Analysis — Compliance Assessment
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to regulatory or compliance questions paired with relevant company and product information. Responses correspond to competing legal analyses. An autograder for this task would assess which analysis is more thorough, accurate, or practically useful.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"A fintech startup intends to offer a peer-to-peer lending product in all 50 states. Identify the primary federal and state regulatory frameworks that would apply and describe the key compliance obligations the company must address before launch. [Company description and product term sheet]"</blockquote>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Legal Research Memos
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to research questions posed by a supervising attorney, along with relevant factual context. Responses correspond to competing research memos. An autograder for this task would assess which memo more accurately states the law, identifies the most relevant authority, and applies it to the facts.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"A client based in Texas entered into a software licensing agreement with a vendor that included a mandatory arbitration clause. The client now wants to bring a class action. Write a short research memo analyzing whether the arbitration clause is enforceable and whether it bars class proceedings under current federal and Texas law. [Contract excerpt]"</blockquote>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Client Advice Letters
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to a client situation and the specific question the client has asked. Responses correspond to competing advice letters. An autograder for this task would assess which letter more clearly explains the legal situation, identifies the key risks, and provides actionable guidance appropriate for a non-lawyer reader.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"Your client is a small business owner who has received a cease-and-desist letter alleging trademark infringement. They have been using their current business name for six years. Draft a client advice letter explaining their legal exposure, options, and recommended next steps in plain language."</blockquote>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Due Diligence — Contract Review
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to a contract review task specifying the client's position and the issues to flag. Responses correspond to competing due diligence summaries. An autograder for this task would assess which summary more accurately identifies material risks, missing provisions, and negotiating points relevant to the client.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"You represent the buyer in an acquisition. Review the following target company's standard customer agreement and identify any provisions that create material liability, limit assignability, or would require third-party consent to transfer upon closing. [Contract text]"</blockquote>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Demand Letters
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to a dispute context and the client's objectives. Responses correspond to competing demand letters. An autograder for this task would assess which letter more effectively asserts the client's legal position, sets an appropriate tone, and maximizes the likelihood of a favorable response.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"Your client is a landlord whose commercial tenant vacated the premises three months before the lease term ended without notice, leaving the space in disrepair. Draft a demand letter seeking unpaid rent, early termination damages, and repair costs. [Lease agreement and damage assessment]"</blockquote>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-item-header" onclick="toggleTask(this.parentElement)">
+        Sentencing Advocacy — Mitigation Memoranda
+        <span class="toggle">+</span>
+      </div>
+      <div class="task-item-body">
+        <p>Instructions correspond to a defendant's background, the offense conduct, and the applicable sentencing guidelines range. Responses correspond to competing sentencing memoranda submitted on the defendant's behalf. An autograder for this task would assess which memorandum more effectively presents mitigating factors and advocates for a below-guidelines sentence.</p>
+        <p class="label" style="margin-top:0.75rem;">Example instruction</p>
+        <blockquote>"Your client has pleaded guilty to one count of wire fraud and faces a guidelines range of 37–46 months. He has no prior criminal history, cooperated with investigators, and has significant family caretaking responsibilities. Draft a sentencing memorandum arguing for a sentence of time served. [Client background materials and offense summary]"</blockquote>
+      </div>
+    </div>
+
   </div>
 </div>
 
