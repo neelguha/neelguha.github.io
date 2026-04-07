@@ -285,7 +285,7 @@
 <!-- TL;DR -->
 <div class="tldr">
   <strong>TL;DR</strong>
-  We are building a benchmark to promote development of legal autograders — AI systems that grade other AI systems' legal work. If you are a lawyer, a law firm, or any other legal organization with ideas for legal AI tasks — we want to hear from you. Contributors who make meaningful contributions will be credited as co-authors.
+  The biggest bottleneck in modern legal AI is the cost of evaluation. The standard method for evaluating any legal AI system is to have attorneys manually review the system's outputs. We are building LegalBench V2, a benchmark to promote development of legal autograders — AI systems that grade other AI systems' legal work. If you are a lawyer, a law firm, or any other legal organization with ideas for legal AI tasks — we want to hear from you. Following the success of the original LegalBench project, LegalBench V2 has the potential to shape the next generation of legal AI development. Contributors who make meaningful contributions will be credited as co-authors.
 </div>
 
 <!-- Motivation -->
@@ -295,7 +295,8 @@
     <span class="toggle">+</span>
   </div>
   <div class="accordion-body">
-    <p>A significant barrier to the development and deployment of legal AI systems is the cost of evaluation. For AI systems which output text — such as tools for drafting, analysis, summarization, or question-answering — evaluation requires that human attorneys manually inspect every output. This process is time-consuming, expensive, and must be repeated every time the underlying AI system is updated or modified.</p>
+
+    <p>A significant barrier to the development and deployment of legal AI systems is the cost of measuring performance ("evaluation"). For AI systems which output text — such as tools for drafting, analysis, summarization, or question-answering — evaluation requires that human attorneys manually inspect every output. This process is time-consuming, expensive, and must be repeated every time the underlying AI system is updated or modified.</p>
 
     <p>One possible solution is <strong>autograders</strong>. Autograders are AI systems which automate the process of human review. In other domains, AI researchers have found that autograders can reliably replace human grading, offering robust evaluation results at a fraction of the price. Indeed, autograder-variants have been essential to substantial recent improvements in generative AI.</p>
 
