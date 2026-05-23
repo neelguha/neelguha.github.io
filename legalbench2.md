@@ -33,7 +33,7 @@ This approach is effective, but unfortunately scales extremely poorly because st
 
 ## How do LLM-judges help?
 
-The idea behind LLM-judges is that we can build a separate LLM-based system --- called a "judge" --- which can automate step 3 above. This judge would recieve a question and two candidate answers, and predict which answer an attorney would be likely to prefer. The judge is intended to replicate the kinds of assessments human attorneys make in step 3. Importantly, an accurate judge makes quality assurance substantially cheaper. When presented with a new tool (**Tool C**), you can use the judge as a replacement for human review --- reducing a process that might have ordinarily taken days or weeks to one that takes minutes. 
+The idea behind LLM-judges is that we can build a separate LLM-based system --- called a "judge" --- which can automate step 3 above. This judge would receive a question and two candidate answers, and predict which answer an attorney would be likely to prefer. The judge is intended to replicate the kinds of assessments human attorneys make in step 3. Importantly, an accurate judge makes quality assurance substantially cheaper. When presented with a new tool (**Tool C**), you can use the judge as a replacement for human review --- reducing a process that might have ordinarily taken days or weeks to one that takes minutes.
 
 But how do we know if a judge is accurate? The standard way to assess judge accuracy is to ask if the judge's preferences between pairs of answers agree with attorney preferences. If, over a large number of questions, the response the judge picks is also the response attorneys pick, then we can say that the judge is an accurate proxy for attorney judgements. 
 
