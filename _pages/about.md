@@ -8,7 +8,7 @@ profile:
 
 ---
 
-I am a final year PhD student in Computer Science at Stanford University, advised by [Chris R&eacute;](https://cs.stanford.edu/~chrismre/). My research explores different topics in the intersection of AI and law. **Starting in July 2026, I will be an Associate Professor of Law at Columbia Law School.** 
+I am a final year PhD student in Computer Science at Stanford University, advised by [Chris R&eacute;](https://cs.stanford.edu/~chrismre/). My research explores different topics in the intersection of AI and law. Starting in July 2026, I will be an Associate Professor of Law at Columbia Law School.
 
 I am affiliated with the [Hazy Research Lab](https://hazyresearch.stanford.edu/), the [RegLab](https://reglab.stanford.edu/), and the [LIFTLab](https://liftlab.stanford.edu/). I am grateful to be supported by the [Stanford Interdisciplinary Graduate Fellowship (SIGF)](https://vpge.stanford.edu/fellowships-funding/sigf) and the [HAI Graduate Fellowship](https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows). I hold a JD from Stanford Law, a MS in Machine Learning from Carnegie Mellon University, and a BSH in Computer Science from Stanford University. 
 
