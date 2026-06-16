@@ -8,7 +8,8 @@ profile:
 
 ---
 
-I am a final year PhD student in Computer Science at Stanford University advised by [Chris R&eacute;](https://cs.stanford.edu/~chrismre/).  Starting in July 2026, I will be an Associate Professor of Law at Columbia Law School.
+
+I am an incoming Associate Professor of Law at Columbia Law School. I am a final year PhD student in Computer Science at Stanford University advised by [Chris R&eacute;](https://cs.stanford.edu/~chrismre/).  
 
 My research explores different topics at the intersection of AI and law. I have published across a range of venues, including ML conferences (ICML, NeurIPS, ICLR), law reviews (UPenn, Wisconsin, GW, Harvard JOLT), medical journals (NEJM, JAMA), and interdisciplinary computational legal venues (CSLaw, ICAIL). Here's a representative sample of my recent work:
 
