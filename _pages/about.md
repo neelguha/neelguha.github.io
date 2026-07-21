@@ -13,10 +13,10 @@ I am an Associate Professor of Law at Columbia Law School, and currently in the 
 
 My research explores different topics at the intersection of AI and law. I have published across a range of venues, including ML conferences (ICML, NeurIPS, ICLR), law reviews (UPenn, Wisconsin, GW, Harvard JOLT), medical journals (NEJM, JAMA), and interdisciplinary computational legal venues (CSLaw, ICAIL). Here's a representative sample of my recent work:
 
+- [There's No Free Benchmark: An Institutional View of Legal AI Benchmarking](https://www.pnas.org/doi/10.1073/pnas.2509757122) (PNAS 2026)
 - [A Reasoning-Focused Legal Retrieval Benchmark](/assets/pdf/zheng_2025_reasoning_focused_legal_rag_benchmark.pdf) (CSLaw 2025)
 - [AI Regulation Has Its Own Alignment Problem](https://www.gwlr.org/wp-content/uploads/2024/12/92-Geo.-Wash.-L.-Rev.-1473.pdf) (GW L. Rev. 2024)
 - [Understanding Liability Risk from Using Health Care Artificial Intelligence Tools](https://doi.org/10.1056/NEJMhle2308901) (NEJM 2024)
-- [Smoothie: Label Free Language Model Routing](https://arxiv.org/abs/2412.04692) (NeurIPS 2024)
 - [Private Enforcement in the States](https://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=9834&context=penn_law_review) (U. Pa. L. Rev. 2024)
 - [LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models](https://arxiv.org/abs/2308.11462) (NeurIPS 2023)
 
