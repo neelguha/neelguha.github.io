@@ -22,4 +22,4 @@ My research explores different topics at the intersection of AI and law. I have 
 
 I hold a JD from Stanford Law, a MS in Machine Learning from Carnegie Mellon University, and a BS in Computer Science from Stanford University. During graduate school I was supported by the [Stanford Interdisciplinary Graduate Fellowship (SIGF)](https://vpge.stanford.edu/fellowships-funding/sigf) and the [HAI Graduate Fellowship](https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows). 
 
-You can find my faculty webpage [here](https://www.law.columbia.edu/faculty/neel-guha).
+You can find my faculty webpage [here](https://www.law.columbia.edu/faculty/neel-guha). You can find my disclosures [here]().
