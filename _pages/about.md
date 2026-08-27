@@ -20,6 +20,4 @@ My research explores different topics at the intersection of AI and law. I have 
 - [Private Enforcement in the States](https://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=9834&context=penn_law_review) (U. Pa. L. Rev. 2024)
 - [LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models](https://arxiv.org/abs/2308.11462) (NeurIPS 2023)
 
-I hold a JD from Stanford Law, a MS in Machine Learning from Carnegie Mellon University, and a BS in Computer Science from Stanford University. During graduate school I was supported by the [Stanford Interdisciplinary Graduate Fellowship (SIGF)](https://vpge.stanford.edu/fellowships-funding/sigf) and the [HAI Graduate Fellowship](https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows). 
-
-You can find my faculty webpage [here](https://www.law.columbia.edu/faculty/neel-guha). You can find my disclosures [here](https://neelguha.github.io/disclosures.html).
+I hold a JD from Stanford Law, a MS in Machine Learning from Carnegie Mellon University, and a BS in Computer Science from Stanford University. During graduate school I was supported by the [Stanford Interdisciplinary Graduate Fellowship (SIGF)](https://vpge.stanford.edu/fellowships-funding/sigf) and the [HAI Graduate Fellowship](https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows).

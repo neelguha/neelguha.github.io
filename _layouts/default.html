@@ -3,8 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.title != "about" %}{{ page.title | capitalize }} | {% endif %}{{ site.first_name }} {{ site.last_name }}</title>
-  <meta name="description" content="{{ site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <title>{% if page.title and page.title != "about" %}{{ page.title }} | {% endif %}{{ site.first_name }} {{ site.last_name }}</title>
+  {% assign meta_description = page.description | default: site.description %}
+  <meta name="description" content="{{ meta_description | strip_html | strip_newlines | escape | truncate: 160 }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.title and page.title != 'about' %}{{ page.title | escape }}{% else %}{{ site.first_name }} {{ site.last_name }}{% endif %}">
+  <meta property="og:description" content="{{ meta_description | strip_html | strip_newlines | escape | truncate: 160 }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  {% if page.layout == 'post' %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    {% if page.updated %}<meta property="article:modified_time" content="{{ page.updated | date_to_xmlschema }}">{% endif %}
+  {% endif %}
   {% if page.redirect %}
     <meta http-equiv="refresh" content="0; url={{ page.redirect }}">
   {% endif %}
@@ -20,11 +30,13 @@
         <a href="{{ '/' | relative_url }}">{{ site.first_name }} {{ site.last_name }}</a>
       </div>
       <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} style="font-weight:bold"{% endif %}>home</a>
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>home</a>
         {%- assign sorted_pages = site.pages | sort: "nav_order" -%}
         {%- for p in sorted_pages -%}
           {%- if p.nav -%}
-            <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} style="font-weight:bold"{% endif %}>{{ p.title }}</a>
+            {% assign nav_active = false %}
+            {% if page.url == p.url or page.layout == 'post' and p.url == '/blog/' %}{% assign nav_active = true %}{% endif %}
+            <a href="{{ p.url | relative_url }}"{% if nav_active %} class="active"{% endif %}>{{ p.nav_title | default: p.title }}</a>
           {%- endif -%}
         {%- endfor -%}
       </nav>

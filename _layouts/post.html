@@ -2,15 +2,47 @@
 layout: default
 ---
 
-<div class="page-header">{{ page.title }}</div>
-<div class="post-header-meta">
-  {{ page.date | date: "%B %d, %Y" }}
-  {% if page.categories.size > 0 %}
-    &middot;
-    {% for cat in page.categories %}{{ cat }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-  {% endif %}
-</div>
+<article class="post">
+  <header class="post-header">
+    {% if page.type %}
+      <div class="post-type">{{ page.type }}</div>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="post-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="post-header-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.updated %}
+        <span aria-hidden="true"> &middot; </span>
+        Revised <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: "%B %-d, %Y" }}</time>
+      {% endif %}
+    </div>
+  </header>
 
-<div class="post-content">
-  {{ content }}
-</div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <a class="post-back" href="{{ '/blog/' | relative_url }}">Back to all writing</a>
+    {% if page.previous or page.next %}
+      <nav class="post-pagination" aria-label="More writing">
+        <div>
+          {% if page.previous %}
+            <span class="post-pagination-label">Previous</span>
+            <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+          {% endif %}
+        </div>
+        <div class="post-pagination-next">
+          {% if page.next %}
+            <span class="post-pagination-label">Next</span>
+            <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+          {% endif %}
+        </div>
+      </nav>
+    {% endif %}
+  </footer>
+</article>
+
+<script src="{{ '/assets/js/sidenotes.js' | relative_url }}" defer></script>

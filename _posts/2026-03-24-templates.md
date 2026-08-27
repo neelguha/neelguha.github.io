@@ -15,14 +15,19 @@ For these reasons, it is important to understand the different templates. As you
 
 What follows is my best effort to collect and describe different templates. As you might expect, the templates articulated below reflect my own research biases: the papers I’ve written, the areas I work in, and the wonderful folks I collaborate with. To the extent that you think the following list misconstrues a template or overlooks important ones, then I welcome your feedback, and I will try my best to edit this blogpost to reflect inbound comments. 
 
-- [The "Data Artifact Paper"](#the-data-artifact-paper)
-- [The "Horse Race Paper"](#the-horse-race-paper)
-- [The "New Paradigm Paper"](#the-new-paradigm-paper)
-- [The "Resurrected Baseline Paper"](#the-resurrected-baseline-paper)
-- [The "Unification Paper"](#the-unification-paper)
-- [The "Problem Solving Paper"](#the-problem-solving-paper)
-- [The "Discovery Paper"](#the-discovery-paper)
-- [The "Countervailing Wisdom Paper"](#the-countervailing-wisdom-paper)
+<nav class="post-toc" aria-label="Contents">
+  <div class="post-toc-title">Contents</div>
+  <ol class="post-toc-list">
+    <li><a href="#the-data-artifact-paper">The Data Artifact Paper</a></li>
+    <li><a href="#the-horse-race-paper">The Horse Race Paper</a></li>
+    <li><a href="#the-new-paradigm-paper">The New Paradigm Paper</a></li>
+    <li><a href="#the-resurrected-baseline-paper">The Resurrected Baseline Paper</a></li>
+    <li><a href="#the-unification-paper">The Unification Paper</a></li>
+    <li><a href="#the-problem-solving-paper">The Problem Solving Paper</a></li>
+    <li><a href="#the-discovery-paper">The Discovery Paper</a></li>
+    <li><a href="#the-countervailing-wisdom-paper">The Countervailing Wisdom Paper</a></li>
+  </ol>
+</nav>
 
 ## The "Data Artifact Paper"
 
@@ -186,7 +191,7 @@ Countervailing Wisdom papers have a little bit of edge to them. You are essentia
 
 A great example is "[Are Emergent Abilities of Large Language Models a Mirage?](https://arxiv.org/abs/2304.15004)", which won the Outstanding Paper Award at NeurIPS in 2023\. The authors first identify the widely held view that certain LLM capabilities appear suddenly and unpredictably at scale (“emergence”). They then show that emergence is an artifact of the metric, and that toggling between non-linear and linear metrics can induce (or eliminate) emergence. They then apply this insight to LLMs, finding that claims of emergence are somewhat overstated. 
 
-[^1]:  Helpful feedback and comments on drafts of this post were provided by Dan Fu, Vivien Cheng, Mayee Chen, Hermann Kumbong, Yasa Baig, and Francois Chaubard. The ideas discussed here reflect years of conversations with other members of the [Hazy Research](https://hazyresearch.stanford.edu/).
+[^1]:  Helpful feedback and comments on drafts of this post were provided by Dan Fu, Vivien Cheng, Mayee Chen, Hermann Kumbong, Yasa Baig, and Francois Chaubard. The ideas discussed here reflect years of conversations with other members of the [Hazy Research Lab](https://hazyresearch.stanford.edu/).
 
 [^2]:  You don’t often know what type of paper you’re going to write until you’re deep into the research process. The act of writing (i.e., trying to fit your research into a template) is a form of thinking in itself, which might reveal important gaps or potential opportunities. Thus, the correct time to begin writing isn’t at the end of your project, but throughout the process itself.
 
