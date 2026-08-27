@@ -21,10 +21,10 @@ body {
 
 .topbar {
   width: 100%;
-  padding: 1em 0;
+  padding: .8em 0;
   background: #FFF;
   border-bottom: 1px solid #D0D0D0;
-  box-shadow: 0 0 12px rgba(0,0,0,.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -40,9 +40,10 @@ body {
 }
 
 .site-title {
-  font-size: 150%;
-  font-variant: small-caps;
-  letter-spacing: .12em;
+  font-size: 1.35rem;
+  font-variant: normal;
+  font-weight: 700;
+  letter-spacing: -.01em;
 }
 
 .site-title a {
@@ -54,8 +55,16 @@ body {
 }
 
 nav.site-nav a {
-  font-size: 110%;
-  margin-left: 1.5em;
+  display: inline-block;
+  font-size: .95rem;
+  margin-left: 1.4rem;
+  padding: .2rem 0;
+  letter-spacing: .01em;
+  border-bottom: 2px solid transparent;
+}
+
+nav.site-nav a.active {
+  border-bottom-color: #A02020;
 }
 
 /* ---------- Links ---------- */
@@ -157,6 +166,12 @@ hr {
 }
 
 /* ---------- Publications ---------- */
+
+ol.bibliography {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .publications .year-group {
   margin-bottom: .5em;
@@ -262,59 +277,445 @@ hr {
 
 /* ---------- Blog ---------- */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.blog-index {
+  max-width: 44em;
+}
+
+.post-year-group {
+  margin-bottom: 2.25em;
+}
+
+.post-year {
+  margin: 0 0 .9em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #DDD;
+  font-size: 1.35em;
+  font-weight: normal;
+}
+
 .post-list {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 .post-list li {
-  padding-bottom: .6em;
-  border-bottom: 1px solid #eee;
-  margin-bottom: .6em;
+  margin-bottom: 1.15em;
+  padding: 0;
 }
 
-.post-list li:last-child {
-  border-bottom: none;
+.post-list-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5em;
 }
 
-.post-list .post-title {
+.post-list-title {
   font-size: 1.15em;
+  line-height: 1.35;
 }
 
-.post-list .post-title a {
+.post-list-title,
+.post-list-title:visited {
   color: #222;
+  text-decoration-color: transparent !important;
 }
 
-.post-list .post-title a:hover {
+.post-list-title:hover {
   color: #A02020;
+  text-decoration-color: #A02020 !important;
 }
 
-.post-list .post-meta {
+.post-list time {
+  flex: 0 0 auto;
   font-size: .85em;
-  color: #888;
-  margin-top: .1em;
+  color: #666;
 }
 
 .post-list .post-desc {
-  font-size: .95em;
+  max-width: 38em;
+  margin-top: .2em;
+  font-size: .92em;
+  line-height: 1.5;
   color: #555;
-  margin-top: .3em;
 }
 
 /* Single blog post */
-.post-content {
-  font-size: 14pt;
-  line-height: 160%;
+.post {
+  position: relative;
+  max-width: 680px;
+  margin: 1.5em 0 0;
 }
 
-.post-content h2 {
-  margin-top: 2em;
+.post-header {
+  margin-bottom: 3.25em;
+}
+
+.post-type {
+  margin-bottom: .8em;
+  color: #666;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.post-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -.025em;
+  text-wrap: pretty;
+}
+
+.post-subtitle {
+  margin: 1em 0 0;
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.55;
 }
 
 .post-header-meta {
+  margin-top: 1.25em;
+  color: #666;
+  font-size: .82rem;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.68;
+  font-kerning: normal;
+  font-optical-sizing: auto;
+}
+
+.post-content p {
+  margin: 0 0 1.15em;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  line-height: 1.3;
+  font-weight: 700;
+  text-wrap: pretty;
+}
+
+.post-content h2 {
+  margin: 2.5em 0 .7em;
+  font-size: 1.55em;
+}
+
+.post-content h3 {
+  margin: 2.1em 0 .65em;
+  font-size: 1.2em;
+}
+
+.post-content h4 {
+  margin: 1.8em 0 .6em;
+  font-size: 1em;
+}
+
+.post-content a {
+  text-decoration-color: rgba(160,32,32,.55);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.post-content ul,
+.post-content ol {
+  margin: 0 0 1.25em;
+  padding-left: 1.4em;
+}
+
+.post-content li {
+  padding: 0 0 .35em .15em;
+}
+
+.post-toc {
+  margin: 2.25em 0 2.75em;
+  padding: 1.15em 0 1.25em;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+
+.post-toc-title {
+  margin-bottom: .75em;
+  color: #666;
+  font-size: .78em;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.post-content .post-toc-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2em;
+  row-gap: .35em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+}
+
+.post-content .post-toc-list li {
+  display: grid;
+  grid-template-columns: 1.8em 1fr;
+  gap: .25em;
+  padding: 0;
+  counter-increment: toc;
+  font-size: .88em;
+  line-height: 1.45;
+}
+
+.post-content .post-toc-list li::before {
+  content: counter(toc, decimal-leading-zero);
   color: #888;
-  font-size: .9em;
-  margin-bottom: 1.5em;
+  font-size: .78em;
+  line-height: 1.85;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-toc a {
+  color: #333;
+  text-decoration-color: transparent;
+}
+
+.post-toc a:hover {
+  color: #A02020;
+  text-decoration-color: #A02020;
+}
+
+.post-content blockquote {
+  margin: 1.6em 0;
+  padding-left: 1.15em;
+  border-left: 2px solid #CCC;
+  color: #444;
+  font-size: .96em;
+}
+
+.post-content blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.75em auto;
+}
+
+.post-content figure {
+  margin: 2em 0;
+}
+
+.post-content figure img {
+  margin-bottom: .6em;
+}
+
+.post-content figcaption {
+  color: #666;
+  font-size: .78em;
+  line-height: 1.5;
+}
+
+.post-content table {
+  width: 100%;
+  margin: 1.75em 0;
+  border-collapse: collapse;
+  font-size: .88em;
+  line-height: 1.45;
+}
+
+.post-content th,
+.post-content td {
+  padding: .55em .7em;
+  border-bottom: 1px solid #DDD;
+  text-align: left;
+  vertical-align: top;
+}
+
+.post-content th {
+  border-bottom-color: #AAA;
+  font-weight: 700;
+}
+
+.post-content code {
+  padding: .08em .25em;
+  background: #F4F4F2;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: .86em;
+}
+
+.post-content pre {
+  overflow-x: auto;
+  margin: 1.75em 0;
+  padding: 1em 1.1em;
+  background: #F4F4F2;
+  border: 1px solid #E4E4E1;
+  line-height: 1.5;
+}
+
+.post-content pre code {
+  padding: 0;
+  background: none;
+}
+
+.post-content hr {
+  width: 20%;
+  margin: 3em auto;
+}
+
+.post-content sup {
+  line-height: 0;
+}
+
+.post-content a.footnote {
+  padding: 0 .12em;
+  text-decoration: none;
+}
+
+.footnotes {
+  margin-top: 3.5em;
+  padding-top: 1.25em;
+  border-top: 1px solid #DDD;
+  color: #555;
+  font-size: .8em;
+  line-height: 1.55;
+}
+
+.footnotes::before {
+  content: "Notes";
+  display: block;
+  margin-bottom: 1em;
+  color: #222;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.footnotes ol {
+  margin-bottom: 0;
+  padding-left: 1.5em;
+}
+
+.footnotes li {
+  padding-left: .25em;
+}
+
+.footnotes p {
+  margin-bottom: .85em;
+}
+
+.reversefootnote {
+  text-decoration: none !important;
+}
+
+/* Desktop sidenotes are progressively enhanced from Markdown footnotes. */
+.sidenote-layer {
+  display: none;
+}
+
+@media screen and (min-width: 70em) {
+  .post.sidenotes-enabled .sidenote-layer {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 2.5rem);
+    width: 13rem;
+    height: 100%;
+  }
+
+  .post.sidenotes-enabled .footnotes {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .sidenote {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: #555;
+    font-size: .78rem;
+    line-height: 1.5;
+    transition: color .12s ease, background-color .12s ease;
+  }
+
+  .sidenote-number {
+    position: absolute;
+    right: calc(100% + .55rem);
+    color: #888;
+    font-size: .72rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sidenote p {
+    margin: 0;
+  }
+
+  .sidenote.is-active {
+    color: #222;
+    background: #FAF4F4;
+  }
+
+  .post-content a.footnote.is-active {
+    color: #C03030;
+    background: #FAF0F0;
+  }
+}
+
+.post-footer {
+  margin-top: 3.5em;
+  padding-top: 1.25em;
+  border-top: 1px solid #DDD;
+  font-size: .88em;
+}
+
+.post-back {
+  display: inline-block;
+}
+
+.post-pagination {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.post-pagination-next {
+  text-align: right;
+}
+
+.post-pagination-label {
+  display: block;
+  margin-bottom: .3em;
+  color: #666;
+  font-size: .82em;
 }
 
 /* ---------- Highlight box (job market) ---------- */
@@ -352,6 +753,29 @@ hr {
   padding-bottom: .8em;
 }
 
+/* ---------- Accessibility ---------- */
+
+a:focus-visible {
+  outline: 2px solid #A02020;
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+::selection {
+  background: #F0DADA;
+  color: #222;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition-duration: .01ms !important;
+  }
+}
+
 /* ---------- Responsive ---------- */
 
 @media all and (max-width: 42em) {
@@ -379,5 +803,129 @@ hr {
 
   .page-header {
     font-size: 1.5em;
+  }
+
+  .post {
+    margin-top: .75em;
+  }
+
+  .post-header {
+    margin-bottom: 2.25em;
+  }
+
+  .post-title {
+    font-size: clamp(1.8rem, 9vw, 2.25rem);
+  }
+
+  .post-subtitle {
+    font-size: 1.08rem;
+  }
+
+  .post-content {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  .post-content h2 {
+    margin-top: 2.2em;
+    font-size: 1.4em;
+  }
+
+  .post-content .post-toc-list {
+    grid-template-columns: 1fr;
+  }
+
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .post-list-heading {
+    display: block;
+  }
+
+  .post-list time {
+    display: block;
+    margin-top: .15em;
+  }
+
+  .post-pagination {
+    grid-template-columns: 1fr;
+  }
+
+  .post-pagination-next {
+    text-align: left;
+  }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  body {
+    background: #FFF;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .topbar,
+  .site-footer,
+  .post-footer,
+  .sidenote-layer {
+    display: none;
+  }
+
+  .post.sidenotes-enabled .footnotes {
+    position: static;
+    width: auto;
+    height: auto;
+    padding-top: 1.25em;
+    margin: 3.5em 0 0;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
+    border-top: 1px solid #777;
+  }
+
+  .container,
+  .post {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-header {
+    margin-bottom: 2em;
+  }
+
+  .post-title {
+    font-size: 25pt;
+  }
+
+  .post-content {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .post-content h2,
+  .post-content h3,
+  .post-content figure,
+  .post-content table {
+    break-inside: avoid;
+  }
+
+  .post-content h2,
+  .post-content h3 {
+    break-after: avoid;
+  }
+
+  .post-content a {
+    color: #000;
+    text-decoration-color: #777;
+  }
+
+  .post-content pre {
+    white-space: pre-wrap;
   }
 }
