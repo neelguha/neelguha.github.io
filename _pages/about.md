@@ -9,9 +9,7 @@ profile:
 ---
 
 
-I am an Associate Professor of Law at Columbia Law School, and currently in the final stages of completing a PhD in Computer Science at Stanford University (advised by [Chris R&eacute;](https://cs.stanford.edu/~chrismre/)).  
-
-My research explores different topics at the intersection of AI and law. I have published across a range of venues, including ML conferences (ICML, NeurIPS, ICLR), law reviews (UPenn, Wisconsin, GW, Harvard JOLT), medical journals (NEJM, JAMA), and interdisciplinary computational legal venues (CSLaw, ICAIL). Here's a representative sample of my recent work:
+I am an Associate Professor of Law at Columbia Law School. My research explores different topics at the intersection of AI and law. I have published across a range of venues, including ML conferences (ICML, NeurIPS, ICLR), law reviews (UPenn, Wisconsin, GW, Harvard JOLT), medical journals (NEJM, JAMA), and interdisciplinary computational legal venues (CSLaw, ICAIL). Here's a representative sample of my recent work:
 
 - [There's No Free Benchmark: An Institutional View of Legal AI Benchmarking](https://www.pnas.org/doi/10.1073/pnas.2509757122) (PNAS 2026)
 - [A Reasoning-Focused Legal Retrieval Benchmark](/assets/pdf/zheng_2025_reasoning_focused_legal_rag_benchmark.pdf) (CSLaw 2025)
@@ -20,4 +18,4 @@ My research explores different topics at the intersection of AI and law. I have 
 - [Private Enforcement in the States](https://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=9834&context=penn_law_review) (U. Pa. L. Rev. 2024)
 - [LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models](https://arxiv.org/abs/2308.11462) (NeurIPS 2023)
 
-I hold a JD from Stanford Law, a MS in Machine Learning from Carnegie Mellon University, and a BS in Computer Science from Stanford University. During graduate school I was supported by the [Stanford Interdisciplinary Graduate Fellowship (SIGF)](https://vpge.stanford.edu/fellowships-funding/sigf) and the [HAI Graduate Fellowship](https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows).
+I hold a PhD in computer science from Stanford; a JD from Stanford Law; a MS in Machine Learning from Carnegie Mellon University; and a BS in Computer Science from Stanford University. During graduate school I was supported by the [Stanford Interdisciplinary Graduate Fellowship (SIGF)](https://vpge.stanford.edu/fellowships-funding/sigf) and the [HAI Graduate Fellowship](https://hai.stanford.edu/news/stanford-hai-welcomes-graduate-postdoc-fellows).
